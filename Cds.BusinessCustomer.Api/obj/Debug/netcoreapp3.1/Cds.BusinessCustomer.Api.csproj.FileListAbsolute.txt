@@ -68,3 +68,4 @@ C:\Users\imane.abdennour\Source\Repos\Architecture\Cds.BusinessCustomer.Api\obj\
 C:\Users\imane.abdennour\Source\Repos\Architecture\Cds.BusinessCustomer.Api\obj\Debug\netcoreapp3.1\Cds.BusinessCustomer.Api.xml
 C:\Users\imane.abdennour\Source\Repos\Architecture\Cds.BusinessCustomer.Api\obj\Debug\netcoreapp3.1\Cds.BusinessCustomer.Api.pdb
 C:\Users\imane.abdennour\Source\Repos\Architecture\Cds.BusinessCustomer.Api\obj\Debug\netcoreapp3.1\Cds.BusinessCustomer.Api.genruntimeconfig.cache
+C:\Users\imane.abdennour\Source\Repos\Architecture\Cds.BusinessCustomer.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll

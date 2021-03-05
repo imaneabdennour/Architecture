@@ -9,12 +9,13 @@
             Customer Controller
             </summary>
         </member>
-        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.CustomerController.#ctor(Cds.BusinessCustomer.Domain.CustomerAggregate.Abstractions.ICartegieRepository,Microsoft.Extensions.Logging.ILogger{Cds.BusinessCustomer.Api.CustomerFeature.CustomerController})">
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.CustomerController.#ctor(Cds.BusinessCustomer.Domain.CustomerAggregate.Abstractions.ICartegieRepository,Microsoft.Extensions.Logging.ILogger{Cds.BusinessCustomer.Api.CustomerFeature.CustomerController},Cds.BusinessCustomer.Domain.CustomerAggregate.Abstractions.ICustomerHandler)">
             <summary>
             Constructor for BusinessCustomerController
             </summary>
             <param name="service"></param>
             <param name="logger"></param>
+            <param name="handler"></param>
         </member>
         <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.CustomerController.BusinessCustomerInformation_MultipleSearch(System.String,System.String,System.String)">
             <summary>

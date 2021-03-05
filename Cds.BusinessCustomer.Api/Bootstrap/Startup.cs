@@ -1,3 +1,4 @@
+using Cds.BusinessCustomer.Domain;
 using Cds.BusinessCustomer.Domain.CustomerAggregate.Abstractions;
 using Cds.BusinessCustomer.Infrastructure.CustomerRepository;
 using Microsoft.AspNetCore.Builder;
@@ -65,7 +66,9 @@ namespace Cds.BusinessCustomer.Api.Bootstrap
            // services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             // DI : 
-            services.AddScoped<ICartegieRepository, CartegieRepository>();
+            services.AddScoped<ICartegieRepository, CartegieRepository>();  
+            // Registers api handler.
+            services.AddScoped<ICustomerHandler, CustomerHandler>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

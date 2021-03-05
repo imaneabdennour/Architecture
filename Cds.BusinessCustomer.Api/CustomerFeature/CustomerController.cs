@@ -19,16 +19,19 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
     {
         private readonly ICartegieRepository _service;
         private readonly ILogger<CustomerController> _logger;
+        private readonly ICustomerHandler _handler;
 
         /// <summary>
         /// Constructor for BusinessCustomerController
         /// </summary>
         /// <param name="service"></param>
         /// <param name="logger"></param>
-        public CustomerController(ICartegieRepository service, ILogger<CustomerController> logger)
+        /// <param name="handler"></param>
+        public CustomerController(ICartegieRepository service, ILogger<CustomerController> logger, ICustomerHandler handler)
         {
             _service = service;
             _logger = logger;
+            _handler = handler;
         }
 
         /// <summary>
@@ -49,11 +52,9 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
             {
                 if (siret != null)
                 {
-                    if (siret.Length != 14)
-                    {
-                        _logger.LogError($"Failed to retreive customer with siret = {siret}, Siret string should be of length 14");
-                        return BadRequest(new { code = "400", message = "Invalid Siret - should be of length 14" });
-                    }
+                    (bool, string) res = _handler.Validate(siret);
+                    if (! res.Item1)
+                        return BadRequest(new { code = "400", message = res.Item2 });                                   
 
                     var response = await _service.GetInfos_SiretSearch(siret);
 
@@ -67,16 +68,11 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
 
                 else
                 {
-                    if (socialReason == null && zipCode == null)
-                    {
-                        _logger.LogError("Failed to retreive customers - You should specify Siret OR SocialReason and ZipCode");
-                        return BadRequest(new { code = "400", message = "You should enter Siret OR SocialReason and ZipCode" });
-                    }
-                    if (socialReason == null || zipCode == null)
-                    {
-                        _logger.LogError("Failed to retreive customers - You should specify both SocialReason and ZipCode");
-                        return BadRequest(new { code = "400", message = "You should enter both SocialReason and ZipCode" });
-                    }
+                    (bool, string) res = _handler.Validate(socialReason, zipCode);
+
+                    if (! res.Item1)
+                     return BadRequest(new { code = "400", message = res.Item2});
+                    
 
                     var response = await _service.GetInfos_MultipleSearch(socialReason, zipCode);
 
