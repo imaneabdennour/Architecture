@@ -9,7 +9,7 @@
             Customer Controller
             </summary>
         </member>
-        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.CustomerController.#ctor(Cds.BusinessCustomer.Domain.CustomerAggregate.Abstractions.ICartegieRepository,Microsoft.Extensions.Logging.ILogger{Cds.BusinessCustomer.Api.CustomerFeature.CustomerController},Cds.BusinessCustomer.Domain.CustomerAggregate.Abstractions.ICustomerHandler)">
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.CustomerController.#ctor(Cds.BusinessCustomer.Domain.CustomerAggregate.Abstractions.ICartegieRepository,Microsoft.Extensions.Logging.ILogger{Cds.BusinessCustomer.Api.CustomerFeature.CustomerController},Cds.BusinessCustomer.Api.CustomerFeature.Validation.IParametersHandler)">
             <summary>
             Constructor for BusinessCustomerController
             </summary>
@@ -99,6 +99,36 @@
             <summary>
             Civility 
             </summary>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.Validation.IParametersHandler.Validate(System.String)">
+            <summary>
+            Validation for parameter : siret
+            </summary>
+            <param name="siret"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.Validation.IParametersHandler.Validate(System.String,System.String)">
+            <summary>
+            Validation for parameters : socialreason and zipcode
+            </summary>
+            <param name="socialreason"></param>
+            <param name="zipcode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.Validation.ParametersHandler.Validate(System.String)">
+            <summary>
+            Validation for parameter : siret
+            </summary>
+            <param name="siret"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.Validation.ParametersHandler.Validate(System.String,System.String)">
+            <summary>
+            Validation for parameters : socialreason and zipcode
+            </summary>
+            <param name="socialreason"></param>
+            <param name="zipcode"></param>
+            <returns></returns>
         </member>
     </members>
 </doc>

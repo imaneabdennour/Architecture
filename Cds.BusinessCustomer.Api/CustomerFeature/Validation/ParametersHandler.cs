@@ -6,29 +6,39 @@ using System.Text;
 using System.Threading.Tasks;
 using Cds.BusinessCustomer.Domain.CustomerAggregate.Abstractions;
 
-namespace Cds.BusinessCustomer.Domain
+namespace Cds.BusinessCustomer.Api.CustomerFeature.Validation
 {
-    public class CustomerHandler : ICustomerHandler
+    public class ParametersHandler : IParametersHandler
     {
-        private readonly ILogger<CustomerHandler> _logger;
+        private readonly ILogger<ParametersHandler> _logger;
 
-        public CustomerHandler(ILogger<CustomerHandler> logger)
+        public ParametersHandler(ILogger<ParametersHandler> logger)
         {
             _logger = logger;
         }
-
+        
+        /// <summary>
+        /// Validation for parameter : siret
+        /// </summary>
+        /// <param name="siret"></param>
+        /// <returns></returns>
         public (bool, string)  Validate(string siret)
         {
             if (siret.Length != 14)
             {
                 _logger.LogError($"Failed to retreive customer with siret = {siret}, Siret string should be of length 14");
-                //throw new InvalidArgumentException(nameof(siret));
-                //    return BadRequest(new { code = "400", message = "Invalid Siret - should be of length 14" });
+                
                 return (false, "Invalid Siret - should be of length 14");
             }
             return (true, null);
         }
 
+        /// <summary>
+        /// Validation for parameters : socialreason and zipcode
+        /// </summary>
+        /// <param name="socialreason"></param>
+        /// <param name="zipcode"></param>
+        /// <returns></returns>
         public (bool, string) Validate(string socialreason, string zipcode)
         {
             if (socialreason == null && zipcode == null)

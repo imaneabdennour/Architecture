@@ -1,5 +1,7 @@
-﻿using Cds.BusinessCustomer.Domain.CustomerAggregate;
+﻿using Cds.BusinessCustomer.Api.CustomerFeature.Validation;
+using Cds.BusinessCustomer.Domain.CustomerAggregate;
 using Cds.BusinessCustomer.Domain.CustomerAggregate.Abstractions;
+using Cds.BusinessCustomer.Domain.CustomerAggregate.Exceptions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -19,7 +21,7 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
     {
         private readonly ICartegieRepository _service;
         private readonly ILogger<CustomerController> _logger;
-        private readonly ICustomerHandler _handler;
+        private readonly IParametersHandler _handler;
 
         /// <summary>
         /// Constructor for BusinessCustomerController
@@ -27,7 +29,7 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
         /// <param name="service"></param>
         /// <param name="logger"></param>
         /// <param name="handler"></param>
-        public CustomerController(ICartegieRepository service, ILogger<CustomerController> logger, ICustomerHandler handler)
+        public CustomerController(ICartegieRepository service, ILogger<CustomerController> logger, IParametersHandler handler)
         {
             _service = service;
             _logger = logger;
@@ -69,9 +71,8 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
                 else
                 {
                     (bool, string) res = _handler.Validate(socialReason, zipCode);
-
-                    if (! res.Item1)
-                     return BadRequest(new { code = "400", message = res.Item2});
+                     if (! res.Item1)
+                        return BadRequest(new { code = "400", message = res.Item2});
                     
 
                     var response = await _service.GetInfos_MultipleSearch(socialReason, zipCode);
@@ -109,10 +110,11 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
                 }
                 return Ok(new CustomerViewModel(response));
             }
-            catch (Exception)
+            catch (InternalServerException ex)
             {
-                _logger.LogError("Failed to retreive customer - Internal Server Error");
+                //throw new InternalServerException();
                 return StatusCode(500);     //500
+
             }
         }
 
