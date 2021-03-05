@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cds.BusinessCustomer.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Cds.BusinessCustomer.Api.Feature.BusinessCustomerController">
+            <summary>
+            Customer Controller
+            </summary>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.Feature.BusinessCustomerController.#ctor(Cds.BusinessCustomer.Domain.Services.ICartegieRepository,Microsoft.Extensions.Logging.ILogger{Cds.BusinessCustomer.Api.Feature.BusinessCustomerController})">
+            <summary>
+            Constructor for BusinessCustomerController
+            </summary>
+            <param name="service"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.Feature.BusinessCustomerController.BusinessCustomerInformation_MultipleSearch(System.String,System.String,System.String)">
+            <summary>
+             Research by Social Reason and Zip Code OR Siret - of the information about the business customer
+            </summary>
+            <param name="socialReason"></param>
+            <param name="zipCode"></param>
+            <param name="siret"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.Feature.BusinessCustomerController.BusinessCustomerInformation_IdSearch(System.String)">
+            <summary>
+            Research by Siret - of the information about the business customer
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.Feature.BusinessCustomerController.GetHealthCheck">
+            <summary>
+            Health check for : HTTP
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Cds.BusinessCustomer.Api.ViewModels.CustomerViewModel">
+            <summary>
+            The model exposed to my frontend
+            </summary>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.ViewModels.CustomerViewModel.#ctor(Cds.BusinessCustomer.Domain.Models.BusinessCustomerModel)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="businessCustomer"></param>
+        </member>
+        <member name="P:Cds.BusinessCustomer.Api.ViewModels.CustomerViewModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:Cds.BusinessCustomer.Api.ViewModels.CustomerViewModel.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:Cds.BusinessCustomer.Api.ViewModels.CustomerViewModel.Adress">
+            <summary>
+            Adress
+            </summary>
+        </member>
+        <member name="P:Cds.BusinessCustomer.Api.ViewModels.CustomerViewModel.Siret">
+            <summary>
+            Siret
+            </summary>
+        </member>
+        <member name="P:Cds.BusinessCustomer.Api.ViewModels.CustomerViewModel.NafCode">
+            <summary>
+            Naf code
+            </summary>
+        </member>
+        <member name="P:Cds.BusinessCustomer.Api.ViewModels.CustomerViewModel.Phone">
+            <summary>
+            Phone Number
+            </summary>       
+        </member>
+        <member name="P:Cds.BusinessCustomer.Api.ViewModels.CustomerViewModel.ZipCode">
+            <summary>
+            Zip Code
+            </summary>      
+        </member>
+        <member name="P:Cds.BusinessCustomer.Api.ViewModels.CustomerViewModel.City">
+            <summary>
+            City
+            </summary>      
+        </member>
+        <member name="P:Cds.BusinessCustomer.Api.ViewModels.CustomerViewModel.SocialReason">
+            <summary>
+            Social Reason
+            </summary>
+        </member>
+        <member name="P:Cds.BusinessCustomer.Api.ViewModels.CustomerViewModel.Civility">
+            <summary>
+            Civility 
+            </summary>
+        </member>
+    </members>
+</doc>
