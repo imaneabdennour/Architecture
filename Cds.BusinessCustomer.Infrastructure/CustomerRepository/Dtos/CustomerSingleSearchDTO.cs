@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace Cds.BusinessCustomer.Infrastructure.Dtos
+namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository.Dtos
 {
     /// <summary>
     /// Solution to not expose my Customer objects 

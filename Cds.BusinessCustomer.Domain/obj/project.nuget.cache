@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lY61fHrTzyqu1zzn3Z4QwQkcPvxg5ssZW3TcHhaP3cHJX2/IdjEAbA0mrYDN3KZ36FustU+hZsYJFvlbxI+vfw==",
+  "dgSpecHash": "yCc4RIgWZM59ptuMlZXioUbAD9icZ6YXSCn+P5TNPkIYitQKSSJCAeeUEUaPxHpBvJFd6H5uNvgC0tRjSIbZZA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\imane.abdennour\\source\\repos\\BusinessCustomerCds\\Cds.BusinessCustomer.Domain\\Cds.BusinessCustomer.Domain.csproj",
+  "projectFilePath": "C:\\Users\\imane.abdennour\\Source\\Repos\\Architecture\\Cds.BusinessCustomer.Domain\\Cds.BusinessCustomer.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

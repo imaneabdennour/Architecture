@@ -1,5 +1,5 @@
-using Cds.BusinessCustomer.Domain.Services;
-using Cds.BusinessCustomer.Infrastructure.Http;
+using Cds.BusinessCustomer.Domain.CustomerAggregate.Abstractions;
+using Cds.BusinessCustomer.Infrastructure.CustomerRepository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -16,7 +16,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace Cds.BusinessCustomer.Api
+namespace Cds.BusinessCustomer.Api.Bootstrap
 {
     public class Startup
     {

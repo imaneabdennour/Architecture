@@ -1,10 +1,9 @@
-﻿using Cds.BusinessCustomer.Domain.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cds.BusinessCustomer.Domain.Services
+namespace Cds.BusinessCustomer.Domain.CustomerAggregate.Abstractions
 {
     public interface ICartegieRepository
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace Cds.BusinessCustomer.Domain.Models
+namespace Cds.BusinessCustomer.Domain.CustomerAggregate
 {
     /// <summary>
     /// Business Customer Model (Not exposed)

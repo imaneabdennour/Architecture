@@ -1,8 +1,8 @@
-﻿using Cds.BusinessCustomer.Domain.Models;
+﻿using Cds.BusinessCustomer.Domain.CustomerAggregate;
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cds.BusinessCustomer.Api.ViewModels
+namespace Cds.BusinessCustomer.Api.CustomerFeature
 {
     /// <summary>
     /// The model exposed to my frontend

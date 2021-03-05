@@ -9,7 +9,7 @@
             Customer Controller
             </summary>
         </member>
-        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.CustomerController.#ctor(Cds.BusinessCustomer.Domain.Services.ICartegieRepository,Microsoft.Extensions.Logging.ILogger{Cds.BusinessCustomer.Api.CustomerFeature.CustomerController})">
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.CustomerController.#ctor(Cds.BusinessCustomer.Domain.CustomerAggregate.Abstractions.ICartegieRepository,Microsoft.Extensions.Logging.ILogger{Cds.BusinessCustomer.Api.CustomerFeature.CustomerController})">
             <summary>
             Constructor for BusinessCustomerController
             </summary>
@@ -38,63 +38,63 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="T:Cds.BusinessCustomer.Api.ViewModels.CustomerViewModel">
+        <member name="T:Cds.BusinessCustomer.Api.CustomerFeature.CustomerViewModel">
             <summary>
             The model exposed to my frontend
             </summary>
         </member>
-        <member name="M:Cds.BusinessCustomer.Api.ViewModels.CustomerViewModel.#ctor(Cds.BusinessCustomer.Domain.Models.Customer)">
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.CustomerViewModel.#ctor(Cds.BusinessCustomer.Domain.CustomerAggregate.Customer)">
             <summary>
             Constructor
             </summary>
             <param name="businessCustomer"></param>
         </member>
-        <member name="P:Cds.BusinessCustomer.Api.ViewModels.CustomerViewModel.Id">
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.CustomerViewModel.Id">
             <summary>
             Id
             </summary>
         </member>
-        <member name="P:Cds.BusinessCustomer.Api.ViewModels.CustomerViewModel.Name">
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.CustomerViewModel.Name">
             <summary>
             Name
             </summary>
         </member>
-        <member name="P:Cds.BusinessCustomer.Api.ViewModels.CustomerViewModel.Adress">
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.CustomerViewModel.Adress">
             <summary>
             Adress
             </summary>
         </member>
-        <member name="P:Cds.BusinessCustomer.Api.ViewModels.CustomerViewModel.Siret">
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.CustomerViewModel.Siret">
             <summary>
             Siret
             </summary>
         </member>
-        <member name="P:Cds.BusinessCustomer.Api.ViewModels.CustomerViewModel.NafCode">
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.CustomerViewModel.NafCode">
             <summary>
             Naf code
             </summary>
         </member>
-        <member name="P:Cds.BusinessCustomer.Api.ViewModels.CustomerViewModel.Phone">
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.CustomerViewModel.Phone">
             <summary>
             Phone Number
             </summary>       
         </member>
-        <member name="P:Cds.BusinessCustomer.Api.ViewModels.CustomerViewModel.ZipCode">
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.CustomerViewModel.ZipCode">
             <summary>
             Zip Code
             </summary>      
         </member>
-        <member name="P:Cds.BusinessCustomer.Api.ViewModels.CustomerViewModel.City">
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.CustomerViewModel.City">
             <summary>
             City
             </summary>      
         </member>
-        <member name="P:Cds.BusinessCustomer.Api.ViewModels.CustomerViewModel.SocialReason">
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.CustomerViewModel.SocialReason">
             <summary>
             Social Reason
             </summary>
         </member>
-        <member name="P:Cds.BusinessCustomer.Api.ViewModels.CustomerViewModel.Civility">
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.CustomerViewModel.Civility">
             <summary>
             Civility 
             </summary>

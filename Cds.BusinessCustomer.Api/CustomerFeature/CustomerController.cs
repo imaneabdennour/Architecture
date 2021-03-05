@@ -1,6 +1,5 @@
-﻿using Cds.BusinessCustomer.Api.ViewModels;
-using Cds.BusinessCustomer.Domain.Models;
-using Cds.BusinessCustomer.Domain.Services;
+﻿using Cds.BusinessCustomer.Domain.CustomerAggregate;
+using Cds.BusinessCustomer.Domain.CustomerAggregate.Abstractions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;

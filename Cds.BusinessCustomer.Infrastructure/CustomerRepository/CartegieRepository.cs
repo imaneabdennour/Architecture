@@ -1,6 +1,6 @@
-﻿using Cds.BusinessCustomer.Domain.Models;
-using Cds.BusinessCustomer.Domain.Services;
-using Cds.BusinessCustomer.Infrastructure.Dtos;
+﻿using Cds.BusinessCustomer.Domain.CustomerAggregate;
+using Cds.BusinessCustomer.Domain.CustomerAggregate.Abstractions;
+using Cds.BusinessCustomer.Infrastructure.CustomerRepository.Dtos;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cds.BusinessCustomer.Infrastructure.Http
+namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository
 {
     public class CartegieRepository : ICartegieRepository
     {

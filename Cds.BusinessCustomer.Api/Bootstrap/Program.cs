@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Cds.BusinessCustomer.Api
+namespace Cds.BusinessCustomer.Api.Bootstrap
 {
     public class Program
     {
