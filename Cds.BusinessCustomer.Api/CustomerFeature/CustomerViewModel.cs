@@ -14,7 +14,7 @@ namespace Cds.BusinessCustomer.Api.ViewModels
         /// Constructor
         /// </summary>
         /// <param name="businessCustomer"></param>
-        public CustomerViewModel(BusinessCustomerModel businessCustomer)
+        public CustomerViewModel(Customer businessCustomer)
         {
             Id = businessCustomer.Id;
             Name = businessCustomer.Name;

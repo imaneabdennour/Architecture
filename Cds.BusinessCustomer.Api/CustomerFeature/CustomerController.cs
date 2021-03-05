@@ -11,22 +11,22 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
-namespace Cds.BusinessCustomer.Api.Feature
+namespace Cds.BusinessCustomer.Api.CustomerFeature
 {
     /// <summary>
     /// Customer Controller
     /// </summary>
-    public class BusinessCustomerController : Controller
+    public class CustomerController : Controller
     {
         private readonly ICartegieRepository _service;
-        private readonly ILogger<BusinessCustomerController> _logger;
+        private readonly ILogger<CustomerController> _logger;
 
         /// <summary>
         /// Constructor for BusinessCustomerController
         /// </summary>
         /// <param name="service"></param>
         /// <param name="logger"></param>
-        public BusinessCustomerController(ICartegieRepository service, ILogger<BusinessCustomerController> logger)
+        public CustomerController(ICartegieRepository service, ILogger<CustomerController> logger)
         {
             _service = service;
             _logger = logger;
@@ -40,7 +40,7 @@ namespace Cds.BusinessCustomer.Api.Feature
         /// <param name="siret"></param>
         /// <returns></returns>
         [HttpGet("business-customer-information")]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<BusinessCustomerModel>))]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<Customer>))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -100,7 +100,7 @@ namespace Cds.BusinessCustomer.Api.Feature
         /// <param name="Id"></param>
         /// <returns></returns>
         [HttpGet("business-customer-information/{Id}")]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(BusinessCustomerModel))]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Customer))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> BusinessCustomerInformation_IdSearch([FromRoute] string Id)

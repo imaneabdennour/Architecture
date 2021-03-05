@@ -8,7 +8,7 @@ namespace Cds.BusinessCustomer.Domain.Models
     /// <summary>
     /// Business Customer Model (Not exposed)
     /// </summary>
-    public class BusinessCustomerModel
+    public class Customer
     {
         /// <summary>
         /// Id

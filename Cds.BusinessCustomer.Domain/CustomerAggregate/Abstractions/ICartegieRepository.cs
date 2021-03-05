@@ -8,8 +8,8 @@ namespace Cds.BusinessCustomer.Domain.Services
 {
     public interface ICartegieRepository
     {
-        Task<List<BusinessCustomerModel>> GetInfos_MultipleSearch(string socialReason, string zipCode);
-        Task<BusinessCustomerModel> GetInfos_IdSearch(string id);
-        Task<BusinessCustomerModel> GetInfos_SiretSearch(string siret);
+        Task<List<Customer>> GetInfos_MultipleSearch(string socialReason, string zipCode);
+        Task<Customer> GetInfos_IdSearch(string id);
+        Task<Customer> GetInfos_SiretSearch(string siret);
     }
 }

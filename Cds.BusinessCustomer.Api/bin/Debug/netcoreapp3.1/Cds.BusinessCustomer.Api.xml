@@ -4,19 +4,19 @@
         <name>Cds.BusinessCustomer.Api</name>
     </assembly>
     <members>
-        <member name="T:Cds.BusinessCustomer.Api.Feature.BusinessCustomerController">
+        <member name="T:Cds.BusinessCustomer.Api.CustomerFeature.CustomerController">
             <summary>
             Customer Controller
             </summary>
         </member>
-        <member name="M:Cds.BusinessCustomer.Api.Feature.BusinessCustomerController.#ctor(Cds.BusinessCustomer.Domain.Services.ICartegieRepository,Microsoft.Extensions.Logging.ILogger{Cds.BusinessCustomer.Api.Feature.BusinessCustomerController})">
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.CustomerController.#ctor(Cds.BusinessCustomer.Domain.Services.ICartegieRepository,Microsoft.Extensions.Logging.ILogger{Cds.BusinessCustomer.Api.CustomerFeature.CustomerController})">
             <summary>
             Constructor for BusinessCustomerController
             </summary>
             <param name="service"></param>
             <param name="logger"></param>
         </member>
-        <member name="M:Cds.BusinessCustomer.Api.Feature.BusinessCustomerController.BusinessCustomerInformation_MultipleSearch(System.String,System.String,System.String)">
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.CustomerController.BusinessCustomerInformation_MultipleSearch(System.String,System.String,System.String)">
             <summary>
              Research by Social Reason and Zip Code OR Siret - of the information about the business customer
             </summary>
@@ -25,14 +25,14 @@
             <param name="siret"></param>
             <returns></returns>
         </member>
-        <member name="M:Cds.BusinessCustomer.Api.Feature.BusinessCustomerController.BusinessCustomerInformation_IdSearch(System.String)">
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.CustomerController.BusinessCustomerInformation_IdSearch(System.String)">
             <summary>
             Research by Siret - of the information about the business customer
             </summary>
             <param name="Id"></param>
             <returns></returns>
         </member>
-        <member name="M:Cds.BusinessCustomer.Api.Feature.BusinessCustomerController.GetHealthCheck">
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.CustomerController.GetHealthCheck">
             <summary>
             Health check for : HTTP
             </summary>
@@ -43,7 +43,7 @@
             The model exposed to my frontend
             </summary>
         </member>
-        <member name="M:Cds.BusinessCustomer.Api.ViewModels.CustomerViewModel.#ctor(Cds.BusinessCustomer.Domain.Models.BusinessCustomerModel)">
+        <member name="M:Cds.BusinessCustomer.Api.ViewModels.CustomerViewModel.#ctor(Cds.BusinessCustomer.Domain.Models.Customer)">
             <summary>
             Constructor
             </summary>

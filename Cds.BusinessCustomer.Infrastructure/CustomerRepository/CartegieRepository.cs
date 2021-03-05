@@ -15,7 +15,7 @@ namespace Cds.BusinessCustomer.Infrastructure.Http
     public class CartegieRepository : ICartegieRepository
     {
         private string baseUrl = "https://6037a3775435040017722f92.mockapi.io/api/v1/Company/";
-        public async Task<BusinessCustomerModel> GetInfos_IdSearch(string id)
+        public async Task<Customer> GetInfos_IdSearch(string id)
         {
             CustomerSingleSearchDTO ConsumerInfo = new CustomerSingleSearchDTO();
 
@@ -38,7 +38,7 @@ namespace Cds.BusinessCustomer.Infrastructure.Http
                     ConsumerInfo = JsonConvert.DeserializeObject<CustomerSingleSearchDTO>(EmpResponse.Substring(1, EmpResponse.Length - 2));
                 }
 
-                return new BusinessCustomerModel()
+                return new Customer()
                 {
                     Name = ConsumerInfo.Name,
                     Siret = ConsumerInfo.Siret,
@@ -49,7 +49,7 @@ namespace Cds.BusinessCustomer.Infrastructure.Http
             }
 
         }
-        public async Task<List<BusinessCustomerModel>> GetInfos_MultipleSearch(string socialReason, string zipCode)
+        public async Task<List<Customer>> GetInfos_MultipleSearch(string socialReason, string zipCode)
         {
             List<CustomerMultipleSearchDTO> ConsumerInfo = new List<CustomerMultipleSearchDTO>();
 
@@ -71,13 +71,13 @@ namespace Cds.BusinessCustomer.Infrastructure.Http
                     ConsumerInfo = JsonConvert.DeserializeObject<List<CustomerMultipleSearchDTO>>(EmpResponse);
                 }
 
-                List<BusinessCustomerModel> list = ConsumerInfo.Select(e => new BusinessCustomerModel { Id = e.Id, Name = e.Name, Adress = e.Adress }).ToList();
+                List<Customer> list = ConsumerInfo.Select(e => new Customer { Id = e.Id, Name = e.Name, Adress = e.Adress }).ToList();
                 return list;
             }
 
         }
 
-        public async Task<BusinessCustomerModel> GetInfos_SiretSearch(string siret)
+        public async Task<Customer> GetInfos_SiretSearch(string siret)
         {
             CustomerSingleSearchDTO ConsumerInfo = new CustomerSingleSearchDTO();
 
@@ -100,7 +100,7 @@ namespace Cds.BusinessCustomer.Infrastructure.Http
                     ConsumerInfo = JsonConvert.DeserializeObject<CustomerSingleSearchDTO>(EmpResponse.Substring(1, EmpResponse.Length - 2));
                 }
 
-                return new BusinessCustomerModel()
+                return new Customer()
                 {
                     Name = ConsumerInfo.Name,
                     Siret = ConsumerInfo.Siret,
