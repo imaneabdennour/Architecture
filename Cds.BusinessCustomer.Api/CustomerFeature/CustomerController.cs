@@ -52,6 +52,7 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
         {
             try
             {
+                // recherche par siret :
                 if (siret != null)
                 {
                     (bool, string) res = _handler.Validate(siret);
@@ -65,9 +66,10 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
                         return NotFound();      //404      
                     }
 
-                    return Ok(new CustomerViewModel(response));    //200
+                    return Ok(new SingleCustomerViewModel(response));    //200
                 }
 
+                // recherche par raison sociale et code postal :
                 else
                 {
                     (bool, string) res = _handler.Validate(socialReason, zipCode);
@@ -78,7 +80,7 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
                     var response = await _service.GetInfos_MultipleSearch(socialReason, zipCode);
 
                     // converting from Model to ViewModel
-                    List<CustomerViewModel> list = response.Select(e => new CustomerViewModel(e)).ToList();
+                    List<MultipleCustomersViewModel> list = response.Select(e => new MultipleCustomersViewModel(e)).ToList();
 
                     return Ok(list);    //200
                 }
@@ -108,7 +110,7 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
                 {
                     return NotFound();      //404
                 }
-                return Ok(new CustomerViewModel(response));
+                return Ok(new SingleCustomerViewModel(response));
             }
             catch (InternalServerException ex)
             {

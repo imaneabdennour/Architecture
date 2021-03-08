@@ -8,7 +8,7 @@ namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository.Dtos
 {
     /// <summary>
     /// Solution to not expose my Customer objects 
-    /// Exposed when searching by multiple params
+    /// Exposed when searching by single param
     /// </summary>
     public class CustomerSingleSearchDTO
     {

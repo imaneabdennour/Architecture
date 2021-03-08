@@ -7,16 +7,14 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
     /// <summary>
     /// The model exposed to my frontend
     /// </summary>
-    public class CustomerViewModel
+    public class SingleCustomerViewModel
     {
-
         /// <summary>
         /// Constructor
         /// </summary>
         /// <param name="businessCustomer"></param>
-        public CustomerViewModel(Customer businessCustomer)
+        public SingleCustomerViewModel(Customer businessCustomer)
         {
-            Id = businessCustomer.Id;
             Name = businessCustomer.Name;
             Adress = businessCustomer.Adress;
             Siret = businessCustomer.Siret;
@@ -28,22 +26,10 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
             Civility = businessCustomer.Civility;
         }
 
-
-        /// <summary>
-        /// Id
-        /// </summary>
-        public string Id { get; set; }
-
         /// <summary>
         /// Name
         /// </summary>
         public string Name { get; set; }
-
-        /// <summary>
-        /// Adress
-        /// </summary>
-        public string Adress { get; set; }
-
 
         /// <summary>
         /// Siret
@@ -55,6 +41,11 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
         /// Naf code
         /// </summary>
         public string NafCode { get; set; }
+
+        /// <summary>
+        /// Adress
+        /// </summary>
+        public string Adress { get; set; }
 
         /// <summary>
         /// Phone Number

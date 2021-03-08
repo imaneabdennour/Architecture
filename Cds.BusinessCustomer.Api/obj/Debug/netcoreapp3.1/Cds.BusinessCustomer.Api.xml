@@ -39,63 +39,90 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="T:Cds.BusinessCustomer.Api.CustomerFeature.CustomerViewModel">
+        <member name="T:Cds.BusinessCustomer.Api.CustomerFeature.MultipleCustomersViewModel">
             <summary>
-            The model exposed to my frontend
+            ViewModel for multiple customers
+            Exposed when searching by multiple params
             </summary>
         </member>
-        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.CustomerViewModel.#ctor(Cds.BusinessCustomer.Domain.CustomerAggregate.Customer)">
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.MultipleCustomersViewModel.#ctor(Cds.BusinessCustomer.Domain.CustomerAggregate.Customer)">
             <summary>
             Constructor
             </summary>
             <param name="businessCustomer"></param>
         </member>
-        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.CustomerViewModel.Id">
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.MultipleCustomersViewModel.Id">
             <summary>
             Id
             </summary>
         </member>
-        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.CustomerViewModel.Name">
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.MultipleCustomersViewModel.Name">
             <summary>
             Name
             </summary>
         </member>
-        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.CustomerViewModel.Adress">
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.MultipleCustomersViewModel.Adress">
             <summary>
             Adress
             </summary>
         </member>
-        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.CustomerViewModel.Siret">
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.MultipleCustomersViewModel.ZipCode">
+            <summary>
+            Zip code
+            </summary>
+        </member>
+        <member name="T:Cds.BusinessCustomer.Api.CustomerFeature.SingleCustomerViewModel">
+            <summary>
+            The model exposed to my frontend
+            </summary>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.SingleCustomerViewModel.#ctor(Cds.BusinessCustomer.Domain.CustomerAggregate.Customer)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="businessCustomer"></param>
+        </member>
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.SingleCustomerViewModel.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.SingleCustomerViewModel.Siret">
             <summary>
             Siret
             </summary>
         </member>
-        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.CustomerViewModel.NafCode">
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.SingleCustomerViewModel.NafCode">
             <summary>
             Naf code
             </summary>
         </member>
-        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.CustomerViewModel.Phone">
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.SingleCustomerViewModel.Adress">
+            <summary>
+            Adress
+            </summary>
+        </member>
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.SingleCustomerViewModel.Phone">
             <summary>
             Phone Number
             </summary>       
         </member>
-        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.CustomerViewModel.ZipCode">
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.SingleCustomerViewModel.ZipCode">
             <summary>
             Zip Code
             </summary>      
         </member>
-        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.CustomerViewModel.City">
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.SingleCustomerViewModel.City">
             <summary>
             City
             </summary>      
         </member>
-        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.CustomerViewModel.SocialReason">
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.SingleCustomerViewModel.SocialReason">
             <summary>
             Social Reason
             </summary>
         </member>
-        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.CustomerViewModel.Civility">
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.SingleCustomerViewModel.Civility">
             <summary>
             Civility 
             </summary>
