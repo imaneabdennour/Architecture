@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository
 {
-    public class CartegieRepository : ICartegieRepository
+    public class CartegieRepository :  ICartegieRepository
     {
         private string baseUrl = "https://6037a3775435040017722f92.mockapi.io/api/v1/Company/";
         /// <summary>
