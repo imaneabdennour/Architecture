@@ -20,16 +20,16 @@ namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public Customer GetInfos_IdSearch(string id)
+        public Task<Customer> GetInfos_IdSearch(string id)
         {
             CustomerSingleSearchDTO ConsumerInfo = SingleSearch("ResearchById").Result;
-            return new Customer()
+            return Task.FromResult(new Customer()
             {
                 Name = ConsumerInfo.Name,
                 Siret = ConsumerInfo.Siret,
                 NafCode = ConsumerInfo.NafCode,
                 Adress = ConsumerInfo.Adress
-            };
+            });
         }
 
         /// <summary>
@@ -37,17 +37,17 @@ namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository
         /// </summary>
         /// <param name="siret"></param>
         /// <returns></returns>
-        public Customer GetInfos_SiretSearch(string siret)
+        public Task<Customer> GetInfos_SiretSearch(string siret)
         {
             CustomerSingleSearchDTO ConsumerInfo = SingleSearch("ResearchBySiret").Result;
 
-            return new Customer()
+            return Task.FromResult(new Customer()
             {
                 Name = ConsumerInfo.Name,
                 Siret = ConsumerInfo.Siret,
                 NafCode = ConsumerInfo.NafCode,
                 Adress = ConsumerInfo.Adress
-            };
+            });
         }
 
         /// <summary>
@@ -56,17 +56,17 @@ namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository
         /// <param name="socialReason"></param>
         /// <param name="zipCode"></param>
         /// <returns></returns>
-        public List<Customer> GetInfos_MultipleSearch(string socialReason, string zipCode)
+        public Task<List<Customer>> GetInfos_MultipleSearch(string socialReason, string zipCode)
         {
             List<CustomerMultipleSearchDTO> ConsumerInfo = MultipleSearch("RechercheMultiple").Result;
 
             List<Customer> list = ConsumerInfo.Select(e => new Customer { Id = e.Id, Name = e.Name, Adress = e.Adress }).ToList();
-            return list;
+            return Task.FromResult(list);
 
         }
 
 
-                    /// API cartégie ///
+                    /// Communication with API cartégie ///
 
 
         /// <summary>
