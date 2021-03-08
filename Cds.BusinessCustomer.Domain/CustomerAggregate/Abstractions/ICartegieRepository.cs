@@ -12,3 +12,5 @@ namespace Cds.BusinessCustomer.Domain.CustomerAggregate.Abstractions
         Task<Customer> GetInfos_SiretSearch(string siret);
     }
 }
+
+///Change les noms voir la PR et ajoute les commentaires sur chaque méthode et classe
