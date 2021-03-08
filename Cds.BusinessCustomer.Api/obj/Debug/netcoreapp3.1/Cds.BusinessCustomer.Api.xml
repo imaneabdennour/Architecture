@@ -100,6 +100,11 @@
             Civility 
             </summary>
         </member>
+        <member name="T:Cds.BusinessCustomer.Api.CustomerFeature.Validation.IParametersHandler">
+            <summary>
+            Validation of input data
+            </summary>
+        </member>
         <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.Validation.IParametersHandler.Validate(System.String)">
             <summary>
             Validation for parameter : siret

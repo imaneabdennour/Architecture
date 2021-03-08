@@ -5,11 +5,25 @@ VisualStudioVersion = 16.0.31019.35
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sources", "Sources", "{1E8794DB-2AC7-48DF-8CD1-C65A3533A530}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cds.BusinessCustomer.Api", "Cds.BusinessCustomer.Api\Cds.BusinessCustomer.Api.csproj", "{ECA8A5FE-515F-4204-8CF2-B477F5EE2CBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cds.BusinessCustomer.Api", "Cds.BusinessCustomer.Api\Cds.BusinessCustomer.Api.csproj", "{ECA8A5FE-515F-4204-8CF2-B477F5EE2CBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cds.BusinessCustomer.Infrastructure", "Cds.BusinessCustomer.Infrastructure\Cds.BusinessCustomer.Infrastructure.csproj", "{AB68AD59-94A7-42D9-B47D-9B9B75812340}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cds.BusinessCustomer.Infrastructure", "Cds.BusinessCustomer.Infrastructure\Cds.BusinessCustomer.Infrastructure.csproj", "{AB68AD59-94A7-42D9-B47D-9B9B75812340}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cds.BusinessCustomer.Domain", "Cds.BusinessCustomer.Domain\Cds.BusinessCustomer.Domain.csproj", "{3E70FE5A-0418-42FC-A01D-0E1FF6720A67}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cds.BusinessCustomer.Domain", "Cds.BusinessCustomer.Domain\Cds.BusinessCustomer.Domain.csproj", "{3E70FE5A-0418-42FC-A01D-0E1FF6720A67}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{B8CA3F08-7080-4D61-A14B-BF2B3D92AE78}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bdd", "Bdd", "{A915611A-0DDD-494A-87E4-F065FDAC7C90}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pact", "Pact", "{E40FAE92-9895-42A5-9585-9A9B9E8E05CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit", "Unit", "{F751F218-99F6-4014-95F2-42EF6AB2C30C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cds.BusinessCustomer.Api.Tests.Unit", "Cds.BusinessCustomer.Api.Tests.Unit\Cds.BusinessCustomer.Api.Tests.Unit.csproj", "{180E6100-A275-482F-A7F3-42C295BC4DBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cds.BusinessCustomer.Domain.Tests.Unit", "Cds.BusinessCustomer.Domain.Tests.Unit\Cds.BusinessCustomer.Domain.Tests.Unit.csproj", "{86F84DE6-8ACE-4209-BB72-CAC7ACD4C61F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cds.BusinessCustomer.Infrastructure.Tests.Unit", "Cds.BusinessCustomer.Infrastructure.Tests.Unit\Cds.BusinessCustomer.Infrastructure.Tests.Unit.csproj", "{0A4C133C-AB9B-4262-A1C4-88C39D6F97EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +43,18 @@ Global
 		{3E70FE5A-0418-42FC-A01D-0E1FF6720A67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E70FE5A-0418-42FC-A01D-0E1FF6720A67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E70FE5A-0418-42FC-A01D-0E1FF6720A67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{180E6100-A275-482F-A7F3-42C295BC4DBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{180E6100-A275-482F-A7F3-42C295BC4DBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{180E6100-A275-482F-A7F3-42C295BC4DBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{180E6100-A275-482F-A7F3-42C295BC4DBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86F84DE6-8ACE-4209-BB72-CAC7ACD4C61F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86F84DE6-8ACE-4209-BB72-CAC7ACD4C61F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86F84DE6-8ACE-4209-BB72-CAC7ACD4C61F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86F84DE6-8ACE-4209-BB72-CAC7ACD4C61F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A4C133C-AB9B-4262-A1C4-88C39D6F97EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A4C133C-AB9B-4262-A1C4-88C39D6F97EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A4C133C-AB9B-4262-A1C4-88C39D6F97EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A4C133C-AB9B-4262-A1C4-88C39D6F97EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -37,6 +63,12 @@ Global
 		{ECA8A5FE-515F-4204-8CF2-B477F5EE2CBE} = {1E8794DB-2AC7-48DF-8CD1-C65A3533A530}
 		{AB68AD59-94A7-42D9-B47D-9B9B75812340} = {1E8794DB-2AC7-48DF-8CD1-C65A3533A530}
 		{3E70FE5A-0418-42FC-A01D-0E1FF6720A67} = {1E8794DB-2AC7-48DF-8CD1-C65A3533A530}
+		{A915611A-0DDD-494A-87E4-F065FDAC7C90} = {B8CA3F08-7080-4D61-A14B-BF2B3D92AE78}
+		{E40FAE92-9895-42A5-9585-9A9B9E8E05CF} = {B8CA3F08-7080-4D61-A14B-BF2B3D92AE78}
+		{F751F218-99F6-4014-95F2-42EF6AB2C30C} = {B8CA3F08-7080-4D61-A14B-BF2B3D92AE78}
+		{180E6100-A275-482F-A7F3-42C295BC4DBA} = {F751F218-99F6-4014-95F2-42EF6AB2C30C}
+		{86F84DE6-8ACE-4209-BB72-CAC7ACD4C61F} = {F751F218-99F6-4014-95F2-42EF6AB2C30C}
+		{0A4C133C-AB9B-4262-A1C4-88C39D6F97EA} = {F751F218-99F6-4014-95F2-42EF6AB2C30C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A9B459B0-AEE0-439A-8798-A7C6AA14F217}

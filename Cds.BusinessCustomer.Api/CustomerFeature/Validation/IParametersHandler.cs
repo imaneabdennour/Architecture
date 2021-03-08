@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Cds.BusinessCustomer.Api.CustomerFeature.Validation
 {
+    /// <summary>
+    /// Validation of input data
+    /// </summary>
     public interface IParametersHandler
     {
         /// <summary>

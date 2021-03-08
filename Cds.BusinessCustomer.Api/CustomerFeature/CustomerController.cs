@@ -31,9 +31,9 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
         /// <param name="handler"></param>
         public CustomerController(ICartegieRepository service, ILogger<CustomerController> logger, IParametersHandler handler)
         {
-            _service = service;
-            _logger = logger;
-            _handler = handler;
+            _service = service ?? throw new ArgumentNullException(nameof(service)); ;
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger)); ;
+            _handler = handler ?? throw new ArgumentNullException(nameof(handler)); ;
         }
 
         /// <summary>
