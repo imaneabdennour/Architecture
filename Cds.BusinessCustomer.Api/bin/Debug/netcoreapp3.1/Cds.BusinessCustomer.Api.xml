@@ -9,7 +9,7 @@
             Customer Controller
             </summary>
         </member>
-        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.BusinessCustomerController.#ctor(Cds.BusinessCustomer.Domain.CustomerAggregate.Abstractions.ICartegieRepository,Microsoft.Extensions.Logging.ILogger{Cds.BusinessCustomer.Api.CustomerFeature.BusinessCustomerController},Cds.BusinessCustomer.Api.CustomerFeature.Validation.IParametersHandler)">
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.BusinessCustomerController.#ctor(Cds.BusinessCustomer.Infrastructure.CustomerRepository.Abstractions.ICartegieRepository,Microsoft.Extensions.Logging.ILogger{Cds.BusinessCustomer.Api.CustomerFeature.BusinessCustomerController},Cds.BusinessCustomer.Api.CustomerFeature.Validation.IParametersHandler)">
             <summary>
             Constructor for BusinessCustomerController
             </summary>
@@ -45,7 +45,7 @@
             Exposed when searching by multiple params
             </summary>
         </member>
-        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.MultipleCustomersViewModel.#ctor(Cds.BusinessCustomer.Domain.CustomerAggregate.Customer)">
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.MultipleCustomersViewModel.#ctor(Cds.BusinessCustomer.Infrastructure.CustomerRepository.Dtos.CustomerMultipleSearchDTO)">
             <summary>
             Constructor
             </summary>
@@ -76,7 +76,7 @@
             The model exposed to my frontend
             </summary>
         </member>
-        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.SingleCustomerViewModel.#ctor(Cds.BusinessCustomer.Domain.CustomerAggregate.Customer)">
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.SingleCustomerViewModel.#ctor(Cds.BusinessCustomer.Infrastructure.CustomerRepository.Dtos.CustomerSingleSearchDTO)">
             <summary>
             Constructor
             </summary>

@@ -1,7 +1,8 @@
 ﻿using Cds.BusinessCustomer.Api.CustomerFeature.Validation;
 using Cds.BusinessCustomer.Domain.CustomerAggregate;
-using Cds.BusinessCustomer.Domain.CustomerAggregate.Abstractions;
 using Cds.BusinessCustomer.Domain.CustomerAggregate.Exceptions;
+using Cds.BusinessCustomer.Infrastructure.CustomerRepository.Abstractions;
+using Cds.BusinessCustomer.Infrastructure.CustomerRepository.Dtos;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -44,7 +45,7 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
         /// <param name="siret"></param>
         /// <returns></returns>
         [HttpGet("business-customer-information")]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<Customer>))]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -77,7 +78,7 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
                         return BadRequest(new { code = "400", message = res.Item2});
                     
 
-                    List<Customer> response = await _service.GetInfosByCriteria(socialReason, zipCode);
+                    List<CustomerMultipleSearchDTO> response = await _service.GetInfosByCriteria(socialReason, zipCode);
                     if (response == null)
                     {
                         return NotFound("There is no business customer with such social reason and zipcode");
@@ -108,7 +109,6 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
         {
             try
             {
-#nullable enable
                 var response = await _service.GetInfosById(Id);
                 if (response == null)
                 {

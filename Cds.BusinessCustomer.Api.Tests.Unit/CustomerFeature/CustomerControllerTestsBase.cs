@@ -1,6 +1,6 @@
 ﻿using Cds.BusinessCustomer.Api.CustomerFeature;
 using Cds.BusinessCustomer.Api.CustomerFeature.Validation;
-using Cds.BusinessCustomer.Domain.CustomerAggregate.Abstractions;
+using Cds.BusinessCustomer.Infrastructure.CustomerRepository.Abstractions;
 using Microsoft.Extensions.Logging;
 using Moq;
 using System;

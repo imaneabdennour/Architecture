@@ -1,4 +1,5 @@
 ﻿using Cds.BusinessCustomer.Domain.CustomerAggregate;
+using Cds.BusinessCustomer.Infrastructure.CustomerRepository.Dtos;
 using System;
 using System.ComponentModel.DataAnnotations;
 
@@ -13,17 +14,13 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
         /// Constructor
         /// </summary>
         /// <param name="businessCustomer"></param>
-        public SingleCustomerViewModel(Customer businessCustomer)
+        public SingleCustomerViewModel(CustomerSingleSearchDTO businessCustomer)
         {
             Name = businessCustomer.Name;
             Adress = businessCustomer.Adress;
             Siret = businessCustomer.Siret;
             NafCode = businessCustomer.NafCode;
-            Phone = businessCustomer.Phone;
-            ZipCode = businessCustomer.ZipCode;
-            City = businessCustomer.City;
-            SocialReason = businessCustomer.SocialReason;
-            Civility = businessCustomer.Civility;
+       
         }
 
         /// <summary>
