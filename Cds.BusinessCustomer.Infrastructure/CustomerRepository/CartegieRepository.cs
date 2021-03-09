@@ -24,8 +24,7 @@ namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository
         public CartegieRepository(CartegieConfiguration myConfiguration)
         {
             _configuration = myConfiguration;
-            baseUrl = _configuration.BaseUrl;
-            
+            baseUrl = _configuration.BaseUrl;            
         }
 
         /// <summary>
