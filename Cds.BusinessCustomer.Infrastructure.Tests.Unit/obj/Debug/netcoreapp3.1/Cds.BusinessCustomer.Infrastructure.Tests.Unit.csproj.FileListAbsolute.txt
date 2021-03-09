@@ -110,3 +110,7 @@ C:\Users\imane.abdennour\source\repos\Architecture\Cds.BusinessCustomer.Infrastr
 C:\Users\imane.abdennour\source\repos\Architecture\Cds.BusinessCustomer.Infrastructure.Tests.Unit\obj\Debug\netcoreapp3.1\Cds.BusinessCustomer.Infrastructure.Tests.Unit.pdb
 C:\Users\imane.abdennour\source\repos\Architecture\Cds.BusinessCustomer.Infrastructure.Tests.Unit\obj\Debug\netcoreapp3.1\Cds.BusinessCustomer.Infrastructure.Tests.Unit.genruntimeconfig.cache
 C:\Users\imane.abdennour\source\repos\Architecture\Cds.BusinessCustomer.Infrastructure.Tests.Unit\bin\Debug\netcoreapp3.1\xunit.runner.json
+C:\Users\imane.abdennour\source\repos\Architecture\Cds.BusinessCustomer.Infrastructure.Tests.Unit\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\imane.abdennour\source\repos\Architecture\Cds.BusinessCustomer.Infrastructure.Tests.Unit\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\imane.abdennour\source\repos\Architecture\Cds.BusinessCustomer.Infrastructure.Tests.Unit\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\imane.abdennour\source\repos\Architecture\Cds.BusinessCustomer.Infrastructure.Tests.Unit\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll

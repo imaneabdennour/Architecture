@@ -7,9 +7,9 @@ namespace Cds.BusinessCustomer.Domain.CustomerAggregate.Abstractions
 {
     public interface ICartegieRepository
     {
-        Task<List<Customer>> GetInfos_MultipleSearch(string socialReason, string zipCode);
-        Task<Customer> GetInfos_IdSearch(string id);
-        Task<Customer> GetInfos_SiretSearch(string siret);
+        Task<List<Customer>> GetInfosByCriteria(string socialReason, string zipCode);
+        Task<Customer> GetInfosById(string id);
+        Task<Customer> GetInfosBySiret(string siret);
     }
 }
 

@@ -113,3 +113,8 @@ C:\Users\imane.abdennour\source\repos\Architecture\Cds.BusinessCustomer.Api.Test
 C:\Users\imane.abdennour\source\repos\Architecture\Cds.BusinessCustomer.Api.Tests.Unit\obj\Debug\netcoreapp3.1\Cds.BusinessCustomer.Api.Tests.Unit.dll
 C:\Users\imane.abdennour\source\repos\Architecture\Cds.BusinessCustomer.Api.Tests.Unit\obj\Debug\netcoreapp3.1\Cds.BusinessCustomer.Api.Tests.Unit.pdb
 C:\Users\imane.abdennour\source\repos\Architecture\Cds.BusinessCustomer.Api.Tests.Unit\obj\Debug\netcoreapp3.1\Cds.BusinessCustomer.Api.Tests.Unit.genruntimeconfig.cache
+C:\Users\imane.abdennour\source\repos\Architecture\Cds.BusinessCustomer.Api.Tests.Unit\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\imane.abdennour\source\repos\Architecture\Cds.BusinessCustomer.Api.Tests.Unit\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\imane.abdennour\source\repos\Architecture\Cds.BusinessCustomer.Api.Tests.Unit\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\imane.abdennour\source\repos\Architecture\Cds.BusinessCustomer.Api.Tests.Unit\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\imane.abdennour\source\repos\Architecture\Cds.BusinessCustomer.Api.Tests.Unit\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll

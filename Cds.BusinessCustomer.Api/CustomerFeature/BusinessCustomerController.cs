@@ -17,10 +17,10 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
     /// <summary>
     /// Customer Controller
     /// </summary>
-    public class CustomerController : Controller
+    public class BusinessCustomerController : Controller
     {
         private readonly ICartegieRepository _service;
-        private readonly ILogger<CustomerController> _logger;
+        private readonly ILogger<BusinessCustomerController> _logger;
         private readonly IParametersHandler _handler;
 
         /// <summary>
@@ -29,7 +29,7 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
         /// <param name="service"></param>
         /// <param name="logger"></param>
         /// <param name="handler"></param>
-        public CustomerController(ICartegieRepository service, ILogger<CustomerController> logger, IParametersHandler handler)
+        public BusinessCustomerController(ICartegieRepository service, ILogger<BusinessCustomerController> logger, IParametersHandler handler)
         {
             _service = service ?? throw new ArgumentNullException(nameof(service)); ;
             _logger = logger ?? throw new ArgumentNullException(nameof(logger)); ;
@@ -48,7 +48,7 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> BusinessCustomerInformation_MultipleSearch([FromQuery] string socialReason, [FromQuery] string zipCode, [FromQuery] string siret)
+        public async Task<ActionResult> SearchByMultipleCriteria([FromQuery] string socialReason, [FromQuery] string zipCode, [FromQuery] string siret)
         {
             try
             {
@@ -59,11 +59,11 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
                     if (! res.Item1)
                         return BadRequest(new { code = "400", message = res.Item2 });                                   
 
-                    var response = await _service.GetInfos_SiretSearch(siret);
+                    var response = await _service.GetInfosBySiret(siret);
 
                     if (response == null)
                     {
-                        return NotFound();      //404      
+                        return NotFound("There is no business customer with such siret");      //404      
                     }
 
                     return Ok(new SingleCustomerViewModel(response));    //200
@@ -77,8 +77,11 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
                         return BadRequest(new { code = "400", message = res.Item2});
                     
 
-                    var response = await _service.GetInfos_MultipleSearch(socialReason, zipCode);
-
+                    List<Customer> response = await _service.GetInfosByCriteria(socialReason, zipCode);
+                    if (response == null)
+                    {
+                        return NotFound("There is no business customer with such social reason and zipcode");
+                    }
                     // converting from Model to ViewModel :o :o 
                     List<MultipleCustomersViewModel> list = response.Select(e => new MultipleCustomersViewModel(e)).ToList();
 
@@ -101,14 +104,15 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Customer))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> BusinessCustomerInformation_IdSearch([FromRoute] string Id)
+        public async Task<ActionResult<SingleCustomerViewModel>> SearchById([FromRoute] string Id)
         {
             try
             {
-                var response = await _service.GetInfos_IdSearch(Id);
+#nullable enable
+                var response = await _service.GetInfosById(Id);
                 if (response == null)
                 {
-                    return NotFound();      //404
+                    return NotFound("There is no such business customer with such id ");      //404
                 }
                 return Ok(new SingleCustomerViewModel(response));
             }
@@ -138,12 +142,7 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
                 // status code and data :
                 HttpResponseMessage res = await client.GetAsync("healthCheck");
 
-                if (res.IsSuccessStatusCode)
-                {
-                    return true;
-                }
-                else
-                    return false;
+                return res.IsSuccessStatusCode;
             }
         }
 

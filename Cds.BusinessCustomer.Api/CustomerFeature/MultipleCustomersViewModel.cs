@@ -13,6 +13,7 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
     /// </summary>
     public class MultipleCustomersViewModel
     {
+        public MultipleCustomersViewModel() { }
         /// <summary>
         /// Constructor
         /// </summary>

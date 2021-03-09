@@ -69,10 +69,14 @@ namespace Cds.BusinessCustomer.Api.Bootstrap
             services.AddScoped<ICartegieRepository, CartegieRepository>();  
             // Registers api handler.
             services.AddScoped<IParametersHandler, ParametersHandler>();
+
+            // Injection of configuration :
+            services.AddSingleton(Configuration);
+            services.AddScoped<ICartegieConfiguration, CartegieConfiguration>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-            public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {

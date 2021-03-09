@@ -4,12 +4,12 @@
         <name>Cds.BusinessCustomer.Api</name>
     </assembly>
     <members>
-        <member name="T:Cds.BusinessCustomer.Api.CustomerFeature.CustomerController">
+        <member name="T:Cds.BusinessCustomer.Api.CustomerFeature.BusinessCustomerController">
             <summary>
             Customer Controller
             </summary>
         </member>
-        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.CustomerController.#ctor(Cds.BusinessCustomer.Domain.CustomerAggregate.Abstractions.ICartegieRepository,Microsoft.Extensions.Logging.ILogger{Cds.BusinessCustomer.Api.CustomerFeature.CustomerController},Cds.BusinessCustomer.Api.CustomerFeature.Validation.IParametersHandler)">
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.BusinessCustomerController.#ctor(Cds.BusinessCustomer.Domain.CustomerAggregate.Abstractions.ICartegieRepository,Microsoft.Extensions.Logging.ILogger{Cds.BusinessCustomer.Api.CustomerFeature.BusinessCustomerController},Cds.BusinessCustomer.Api.CustomerFeature.Validation.IParametersHandler)">
             <summary>
             Constructor for BusinessCustomerController
             </summary>
@@ -17,7 +17,7 @@
             <param name="logger"></param>
             <param name="handler"></param>
         </member>
-        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.CustomerController.BusinessCustomerInformation_MultipleSearch(System.String,System.String,System.String)">
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.BusinessCustomerController.SearchByMultipleCriteria(System.String,System.String,System.String)">
             <summary>
              Research by Social Reason and Zip Code OR Siret - of the information about the business customer
             </summary>
@@ -26,14 +26,14 @@
             <param name="siret"></param>
             <returns></returns>
         </member>
-        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.CustomerController.BusinessCustomerInformation_IdSearch(System.String)">
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.BusinessCustomerController.SearchById(System.String)">
             <summary>
             Research by Siret - of the information about the business customer
             </summary>
             <param name="Id"></param>
             <returns></returns>
         </member>
-        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.CustomerController.GetHealthCheck">
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.BusinessCustomerController.GetHealthCheck">
             <summary>
             Health check for : HTTP
             </summary>

@@ -29,9 +29,9 @@ namespace Cds.BusinessCustomer.Api.Bootstrap
                 // where to log to :
                 logging.AddDebug();
             })
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
+            .ConfigureWebHostDefaults(webBuilder =>
+            {
+                webBuilder.UseStartup<Startup>();
+            });
     }
 }
