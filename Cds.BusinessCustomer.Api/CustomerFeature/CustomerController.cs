@@ -79,7 +79,7 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
 
                     var response = await _service.GetInfos_MultipleSearch(socialReason, zipCode);
 
-                    // converting from Model to ViewModel
+                    // converting from Model to ViewModel :o :o 
                     List<MultipleCustomersViewModel> list = response.Select(e => new MultipleCustomersViewModel(e)).ToList();
 
                     return Ok(list);    //200
