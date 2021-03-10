@@ -1,5 +1,6 @@
 ﻿using Cds.BusinessCustomer.Api.CustomerFeature.Conversion;
 using Cds.BusinessCustomer.Api.CustomerFeature.Validation;
+using Cds.BusinessCustomer.Api.CustomerFeature.ViewModels;
 using Cds.BusinessCustomer.Infrastructure.CustomerRepository.Abstractions;
 using Cds.BusinessCustomer.Infrastructure.CustomerRepository.Dtos;
 using Microsoft.AspNetCore.Http;

@@ -39,6 +39,11 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:Cds.BusinessCustomer.Api.CustomerFeature.Conversion.Converts">
+            <summary>
+            Class for converting types
+            </summary>
+        </member>
         <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.Conversion.Converts.ToViewModel(Cds.BusinessCustomer.Infrastructure.CustomerRepository.Dtos.CustomerSingleSearchDTO)">
             <summary>
             Converts from DTO to ViewModel - for single search
@@ -50,6 +55,13 @@
             Converts from list of DTO to list of ViewModel - for multiple search
             </summary>
             <param name="businessCustomers"></param>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.Conversion.Converts.ToViewModel(Cds.BusinessCustomer.Infrastructure.CustomerRepository.Dtos.CustomerMultipleSearchDTO)">
+            <summary>
+            Converts from single DTO to single ViewModel - for multiple search
+            </summary>
+            <param name="e"></param>
+            <returns></returns>
         </member>
         <member name="T:Cds.BusinessCustomer.Api.CustomerFeature.CustomerHandler">
             <summary>
@@ -68,88 +80,6 @@
             </summary>
             <param name="siret"></param>
             <returns></returns>
-        </member>
-        <member name="T:Cds.BusinessCustomer.Api.CustomerFeature.MultipleCustomersViewModel">
-            <summary>
-            ViewModel for multiple customers
-            Exposed when searching by multiple params
-            </summary>
-        </member>
-        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.MultipleCustomersViewModel.#ctor(Cds.BusinessCustomer.Infrastructure.CustomerRepository.Dtos.CustomerMultipleSearchDTO)">
-            <summary>
-            Constructor
-            </summary>
-            <param name="businessCustomer"></param>
-        </member>
-        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.MultipleCustomersViewModel.Id">
-            <summary>
-            Id
-            </summary>
-        </member>
-        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.MultipleCustomersViewModel.Name">
-            <summary>
-            Name
-            </summary>
-        </member>
-        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.MultipleCustomersViewModel.Adress">
-            <summary>
-            Adress
-            </summary>
-        </member>
-        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.MultipleCustomersViewModel.ZipCode">
-            <summary>
-            Zip code
-            </summary>
-        </member>
-        <member name="T:Cds.BusinessCustomer.Api.CustomerFeature.SingleCustomerViewModel">
-            <summary>
-            The model exposed to my frontend
-            </summary>
-        </member>
-        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.SingleCustomerViewModel.Name">
-            <summary>
-            Name
-            </summary>
-        </member>
-        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.SingleCustomerViewModel.Siret">
-            <summary>
-            Siret
-            </summary>
-        </member>
-        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.SingleCustomerViewModel.NafCode">
-            <summary>
-            Naf code
-            </summary>
-        </member>
-        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.SingleCustomerViewModel.Adress">
-            <summary>
-            Adress
-            </summary>
-        </member>
-        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.SingleCustomerViewModel.Phone">
-            <summary>
-            Phone Number
-            </summary>       
-        </member>
-        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.SingleCustomerViewModel.ZipCode">
-            <summary>
-            Zip Code
-            </summary>      
-        </member>
-        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.SingleCustomerViewModel.City">
-            <summary>
-            City
-            </summary>      
-        </member>
-        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.SingleCustomerViewModel.SocialReason">
-            <summary>
-            Social Reason
-            </summary>
-        </member>
-        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.SingleCustomerViewModel.Civility">
-            <summary>
-            Civility 
-            </summary>
         </member>
         <member name="T:Cds.BusinessCustomer.Api.CustomerFeature.Validation.IParametersHandler">
             <summary>
@@ -197,11 +127,10 @@
             Exposed when searching by multiple params
             </summary>
         </member>
-        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.ViewModels.MultipleCustomersViewModel.#ctor(Cds.BusinessCustomer.Infrastructure.CustomerRepository.Dtos.CustomerMultipleSearchDTO)">
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.ViewModels.MultipleCustomersViewModel.#ctor">
             <summary>
-            Constructor
+            Default constructor
             </summary>
-            <param name="businessCustomer"></param>
         </member>
         <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.ViewModels.MultipleCustomersViewModel.Id">
             <summary>
@@ -225,7 +154,13 @@
         </member>
         <member name="T:Cds.BusinessCustomer.Api.CustomerFeature.ViewModels.SingleCustomerViewModel">
             <summary>
-            The model exposed to my frontend
+            ViewModel for single customer
+            Exposed when searching by single param
+            </summary>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.ViewModels.SingleCustomerViewModel.#ctor">
+            <summary>
+            Default constructor
             </summary>
         </member>
         <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.ViewModels.SingleCustomerViewModel.Name">

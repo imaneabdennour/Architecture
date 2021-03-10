@@ -14,19 +14,11 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature.ViewModels
     /// </summary>
     public class MultipleCustomersViewModel
     {
-        public MultipleCustomersViewModel() { }
         /// <summary>
-        /// Constructor
+        /// Default constructor
         /// </summary>
-        /// <param name="businessCustomer"></param>
-        public MultipleCustomersViewModel(CustomerMultipleSearchDTO businessCustomer)
-        {
-            Id = businessCustomer.Id;
-            Name = businessCustomer.Name;
-            Adress = businessCustomer.Adress;           
-            ZipCode = businessCustomer.ZipCode;           
-        }
-
+        public MultipleCustomersViewModel() { }
+      
         /// <summary>
         /// Id
         /// </summary>

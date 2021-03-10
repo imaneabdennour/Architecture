@@ -6,21 +6,16 @@ using System.ComponentModel.DataAnnotations;
 namespace Cds.BusinessCustomer.Api.CustomerFeature.ViewModels
 {
     /// <summary>
-    /// The model exposed to my frontend
+    /// ViewModel for single customer
+    /// Exposed when searching by single param
     /// </summary>
     public class SingleCustomerViewModel
     {
-        public SingleCustomerViewModel()
-        {
-
-        }
-        public SingleCustomerViewModel(CustomerSingleSearchDTO businessCustomer)
-        {
-            Name = businessCustomer.Name;
-            Adress = businessCustomer.Adress;
-            Siret = businessCustomer.Siret;
-            NafCode = businessCustomer.NafCode;
-        }
+        /// <summary>
+        /// Default constructor
+        /// </summary>
+        public SingleCustomerViewModel() { }
+        
         /// <summary>
         /// Name
         /// </summary>
