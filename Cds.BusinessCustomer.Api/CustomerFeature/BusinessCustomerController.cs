@@ -56,15 +56,13 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
                 if (siret != null)
                 {
                     (bool, string) res = _handler.Validate(siret);
-                    if (! res.Item1)
-                        return BadRequest(new { code = "400", message = res.Item2 });                                   
+                    if (!res.Item1)    // if res.Item1 = false => BadRequest
+                        return BadRequest(new { code = "400", message = res.Item2 });
 
                     CustomerSingleSearchDTO response = await _service.GetInfosBySiret(siret);
 
                     if (response == null)
-                    {
                         return NotFound("There is no business customer with such siret");      //404      
-                    }
 
                     return Ok(Converts.ToViewModel(response));    //200
                 }
@@ -75,14 +73,12 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
                     (bool, string) res = _handler.Validate(socialReason, zipCode);
                      if (! res.Item1)
                         return BadRequest(new { code = "400", message = res.Item2});
-                    
 
                     List<CustomerMultipleSearchDTO> response = await _service.GetInfosByCriteria(socialReason, zipCode);
-                    if (response == null)
-                    {
-                        return NotFound("There is no business customer with such social reason and zipcode");
-                    }
 
+                    if (response == null)
+                        return NotFound("There is no business customer with such social reason and zipcode");
+                    
                     return Ok(Converts.ToViewModel(response));    //200
                 }
             }

@@ -33,7 +33,6 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature.Conversion
         /// <param name="businessCustomers"></param>
         public static List<MultipleCustomersViewModel> ToViewModel(List<CustomerMultipleSearchDTO> businessCustomers)
         {
-            // mapping DTO  ViewModel - DTO passed as a param in constructor
             List<MultipleCustomersViewModel> list = businessCustomers.Select(e => ToViewModel(e)).ToList();
             return list;
         }

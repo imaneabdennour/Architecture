@@ -91,7 +91,7 @@
             Validation for parameter : siret
             </summary>
             <param name="siret"></param>
-            <returns></returns>
+            <returns>(bool, string) => (siret valide ou pas, message d'erreur au cas non valide)</returns>
         </member>
         <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.Validation.IParametersHandler.Validate(System.String,System.String)">
             <summary>
@@ -99,7 +99,7 @@
             </summary>
             <param name="socialreason"></param>
             <param name="zipcode"></param>
-            <returns></returns>
+            <returns>(bool, string) => (params valides ou pas, message d'erreur au cas non valides)</returns>
         </member>
         <member name="T:Cds.BusinessCustomer.Api.CustomerFeature.Validation.ParametersHandler">
             <summary>
