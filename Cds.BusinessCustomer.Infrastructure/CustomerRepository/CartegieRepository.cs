@@ -1,5 +1,5 @@
 ﻿using Cds.BusinessCustomer.Domain.CustomerAggregate;
-using Cds.BusinessCustomer.Domain.CustomerAggregate.Abstractions;
+using Cds.BusinessCustomer.Infrastructure.CustomerRepository.Abstractions;
 using Cds.BusinessCustomer.Infrastructure.CustomerRepository.Dtos;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
@@ -16,17 +16,15 @@ namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository
 {
     public class CartegieRepository :  ICartegieRepository
     {
-        ICartegieConfiguration _configuration;
+        CartegieConfiguration _configuration;
         string baseUrl;
         string apiKey;
 
 
-        public CartegieRepository(ICartegieConfiguration configuration)
+        public CartegieRepository(CartegieConfiguration myConfiguration)
         {
-            _configuration = configuration;
-
-            baseUrl = _configuration.BaseUrl;
-            apiKey = _configuration.ApiKey;           
+            _configuration = myConfiguration;
+            baseUrl = _configuration.BaseUrl;            
         }
 
         /// <summary>
@@ -34,20 +32,15 @@ namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public Task<Customer> GetInfosById(string id)
+        // DTO
+        public Task<CustomerSingleSearchDTO> GetInfosById(string id)
         {
-            CustomerSingleSearchDTO ConsumerInfo = SingleSearch(_configuration.ById).Result;
-            if(ConsumerInfo == null)
+            CustomerSingleSearchDTO consumerInfo = SingleSearch(_configuration.ById).Result;
+            if(consumerInfo == null)
             {
-                return Task.FromResult<Customer>(null);
+                return Task.FromResult<CustomerSingleSearchDTO>(null);
             }
-            return Task.FromResult(new Customer()
-            {
-                Name = ConsumerInfo.Name,
-                Siret = ConsumerInfo.Siret,
-                NafCode = ConsumerInfo.NafCode,
-                Adress = ConsumerInfo.Adress
-            });
+            return Task.FromResult(consumerInfo);
         }
 
         /// <summary>
@@ -55,20 +48,14 @@ namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository
         /// </summary>
         /// <param name="siret"></param>
         /// <returns></returns>
-        public Task<Customer> GetInfosBySiret(string siret)
+        public Task<CustomerSingleSearchDTO> GetInfosBySiret(string siret)
         {
-            CustomerSingleSearchDTO ConsumerInfo = SingleSearch(_configuration.BySiret).Result;
-            if (ConsumerInfo == null)
+            CustomerSingleSearchDTO consumerInfo = SingleSearch(_configuration.BySiret).Result;
+            if (consumerInfo == null)
             {
-                return Task.FromResult<Customer>(null);
+                return Task.FromResult<CustomerSingleSearchDTO>(null);
             }
-            return Task.FromResult(new Customer()
-            {
-                Name = ConsumerInfo.Name,
-                Siret = ConsumerInfo.Siret,
-                NafCode = ConsumerInfo.NafCode,
-                Adress = ConsumerInfo.Adress
-            });
+            return Task.FromResult(consumerInfo);
         }
 
         /// <summary>
@@ -77,12 +64,12 @@ namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository
         /// <param name="socialReason"></param>
         /// <param name="zipCode"></param>
         /// <returns></returns>
-        public Task<List<Customer>> GetInfosByCriteria(string socialReason, string zipCode)
+        public Task<List<CustomerMultipleSearchDTO>> GetInfosByCriteria(string socialReason, string zipCode)
         {
-            var list = MultipleSearch(_configuration.ByMultiple).Result;
+            List<CustomerMultipleSearchDTO> list = MultipleSearch(_configuration.ByMultiple).Result;
             if(list == null || list.Count == 0)
             {
-                return Task.FromResult<List<Customer>>(null);
+                return Task.FromResult<List<CustomerMultipleSearchDTO>>(null);
             }
             return Task.FromResult(list);
         }
@@ -131,9 +118,9 @@ namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository
         /// </summary>
         /// <param name="param"></param>
         /// <returns></returns>
-        private async Task<List<Customer>> MultipleSearch(string param)
+        private async Task<List<CustomerMultipleSearchDTO>> MultipleSearch(string param)
         {
-            var ConsumerInfo = new List<CustomerMultipleSearchDTO>();
+            var consumerInfo = new List<CustomerMultipleSearchDTO>();
 
             using (var client = new HttpClient())
             {
@@ -151,18 +138,15 @@ namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository
                     var EmpResponse = res.Content.ReadAsStringAsync().Result;
                     if(EmpResponse == null)
                     {
-                        return await Task.FromResult<List<Customer>>(null);
+                        return await Task.FromResult<List<CustomerMultipleSearchDTO>>(null);
                     }
                     //Deserializing the response recieved from web api and storing it
-                    ConsumerInfo = JsonConvert.DeserializeObject<List<CustomerMultipleSearchDTO>>(EmpResponse);
+                    consumerInfo = JsonConvert.DeserializeObject<List<CustomerMultipleSearchDTO>>(EmpResponse);
                 }
             }
-            if(ConsumerInfo == null || ConsumerInfo.Count == 0)
-            {
-                return await Task.FromResult<List<Customer>>(null);
-            }
-            List<Customer> list = ConsumerInfo.Select(e => new Customer { Id = e.Id, Name = e.Name, Adress = e.Adress }).ToList();
-            return list;
+            
+            //List<Customer> list = ConsumerInfo.Select(e => new Customer { Id = e.Id, Name = e.Name, Adress = e.Adress }).ToList();
+            return consumerInfo;
         }
     }
 }

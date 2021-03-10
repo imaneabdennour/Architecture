@@ -1,4 +1,5 @@
 ﻿using Cds.BusinessCustomer.Domain.CustomerAggregate;
+using Cds.BusinessCustomer.Infrastructure.CustomerRepository.Dtos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -18,7 +19,7 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
         /// Constructor
         /// </summary>
         /// <param name="businessCustomer"></param>
-        public MultipleCustomersViewModel(Customer businessCustomer)
+        public MultipleCustomersViewModel(CustomerMultipleSearchDTO businessCustomer)
         {
             Id = businessCustomer.Id;
             Name = businessCustomer.Name;

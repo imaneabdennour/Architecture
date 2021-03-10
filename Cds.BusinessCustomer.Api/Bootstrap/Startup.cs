@@ -1,6 +1,6 @@
 using Cds.BusinessCustomer.Api.CustomerFeature.Validation;
-using Cds.BusinessCustomer.Domain.CustomerAggregate.Abstractions;
 using Cds.BusinessCustomer.Infrastructure.CustomerRepository;
+using Cds.BusinessCustomer.Infrastructure.CustomerRepository.Abstractions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -71,8 +71,8 @@ namespace Cds.BusinessCustomer.Api.Bootstrap
             services.AddScoped<IParametersHandler, ParametersHandler>();
 
             // Injection of configuration :
-            services.AddSingleton(Configuration);
-            services.AddScoped<ICartegieConfiguration, CartegieConfiguration>();
+            services.AddSingleton(Configuration.GetSection("CartegieConfiguration").Get<CartegieConfiguration>());
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
