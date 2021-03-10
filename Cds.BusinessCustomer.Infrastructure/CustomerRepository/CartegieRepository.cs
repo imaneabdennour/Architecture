@@ -24,7 +24,9 @@ namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository
         public CartegieRepository(CartegieConfiguration myConfiguration)
         {
             _configuration = myConfiguration;
-            baseUrl = _configuration.BaseUrl;            
+
+            baseUrl = _configuration.BaseUrl;
+            apiKey = _configuration.ApiKey;
         }
 
         /// <summary>
@@ -51,10 +53,6 @@ namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository
         public Task<CustomerSingleSearchDTO> GetInfosBySiret(string siret)
         {
             CustomerSingleSearchDTO consumerInfo = SingleSearch(_configuration.BySiret).Result;
-            if (consumerInfo == null)
-            {
-                return Task.FromResult<CustomerSingleSearchDTO>(null);
-            }
             return Task.FromResult(consumerInfo);
         }
 
@@ -85,7 +83,8 @@ namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository
         /// <returns></returns>
         private async Task<CustomerSingleSearchDTO> SingleSearch(string param)
         {
-            CustomerSingleSearchDTO ConsumerInfo = new CustomerSingleSearchDTO();
+            Console.WriteLine("helloo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            CustomerSingleSearchDTO ConsumerInfo = new CustomerSingleSearchDTO() { Adress="vbuki"};
 
             using (var client = new HttpClient())
             {
@@ -99,16 +98,15 @@ namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository
 
                 if (res.IsSuccessStatusCode)
                 {
-                    //Storing the response details received from web api   
+                    // Storing the response details received from web api   
                     var EmpResponse = res.Content.ReadAsStringAsync().Result;
                     if (EmpResponse == null)
                     {
                         return await Task.FromResult<CustomerSingleSearchDTO>(null);
                     }
-                    //Deserializing the response recieved from web api and storing it  
+                    // Deserializing the response recieved from web api and storing it  
                     ConsumerInfo = JsonConvert.DeserializeObject<CustomerSingleSearchDTO>(EmpResponse.Substring(1, EmpResponse.Length - 2));
                 }
-
             }
             return ConsumerInfo;
         }
@@ -134,18 +132,17 @@ namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository
 
                 if (res.IsSuccessStatusCode)
                 {
-                    //Storing the response details recieved from web api   
+                    // Storing the response details recieved from web api   
                     var EmpResponse = res.Content.ReadAsStringAsync().Result;
                     if(EmpResponse == null)
                     {
                         return await Task.FromResult<List<CustomerMultipleSearchDTO>>(null);
                     }
-                    //Deserializing the response recieved from web api and storing it
+                    // Deserializing the response recieved from web api and storing it
                     consumerInfo = JsonConvert.DeserializeObject<List<CustomerMultipleSearchDTO>>(EmpResponse);
                 }
             }
             
-            //List<Customer> list = ConsumerInfo.Select(e => new Customer { Id = e.Id, Name = e.Name, Adress = e.Adress }).ToList();
             return consumerInfo;
         }
     }

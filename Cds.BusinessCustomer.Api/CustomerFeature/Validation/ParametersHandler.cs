@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Cds.BusinessCustomer.Api.CustomerFeature.Validation
 {
+    /// <summary>
+    /// Class for parameters validation
+    /// </summary>
     public class ParametersHandler : IParametersHandler
     {
         private readonly ILogger<ParametersHandler> _logger;
@@ -17,7 +20,7 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature.Validation
         }
         
         /// <summary>
-        /// Validation for parameter : siret
+        /// Validation for parameter : siret - should be of length 14
         /// </summary>
         /// <param name="siret"></param>
         /// <returns></returns>

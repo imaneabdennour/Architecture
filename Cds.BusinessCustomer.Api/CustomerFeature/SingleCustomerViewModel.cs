@@ -10,19 +10,17 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
     /// </summary>
     public class SingleCustomerViewModel
     {
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        /// <param name="businessCustomer"></param>
+        public SingleCustomerViewModel()
+        {
+
+        }
         public SingleCustomerViewModel(CustomerSingleSearchDTO businessCustomer)
         {
             Name = businessCustomer.Name;
             Adress = businessCustomer.Adress;
             Siret = businessCustomer.Siret;
             NafCode = businessCustomer.NafCode;
-       
         }
-
         /// <summary>
         /// Name
         /// </summary>

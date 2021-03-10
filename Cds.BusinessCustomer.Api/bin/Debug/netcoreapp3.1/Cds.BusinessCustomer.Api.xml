@@ -6,7 +6,7 @@
     <members>
         <member name="T:Cds.BusinessCustomer.Api.CustomerFeature.BusinessCustomerController">
             <summary>
-            Customer Controller
+            Business Customer Controller
             </summary>
         </member>
         <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.BusinessCustomerController.#ctor(Cds.BusinessCustomer.Infrastructure.CustomerRepository.Abstractions.ICartegieRepository,Microsoft.Extensions.Logging.ILogger{Cds.BusinessCustomer.Api.CustomerFeature.BusinessCustomerController},Cds.BusinessCustomer.Api.CustomerFeature.Validation.IParametersHandler)">
@@ -37,6 +37,36 @@
             <summary>
             Health check for : HTTP
             </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.Conversion.Converts.ToViewModel(Cds.BusinessCustomer.Infrastructure.CustomerRepository.Dtos.CustomerSingleSearchDTO)">
+            <summary>
+            Converts from DTO to ViewModel - for single search
+            </summary>
+            <param name="businessCustomer"></param>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.Conversion.Converts.ToViewModel(System.Collections.Generic.List{Cds.BusinessCustomer.Infrastructure.CustomerRepository.Dtos.CustomerMultipleSearchDTO})">
+            <summary>
+            Converts from list of DTO to list of ViewModel - for multiple search
+            </summary>
+            <param name="businessCustomers"></param>
+        </member>
+        <member name="T:Cds.BusinessCustomer.Api.CustomerFeature.CustomerHandler">
+            <summary>
+            Class for handling query params
+            </summary>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.CustomerHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Cds.BusinessCustomer.Api.CustomerFeature.CustomerHandler})">
+            <summary>
+            Constructor for Customer Handler
+            </summary>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.CustomerHandler.Validate(System.String)">
+            <summary>
+            Validation of param : siret - should be of length 14
+            </summary>
+            <param name="siret"></param>
             <returns></returns>
         </member>
         <member name="T:Cds.BusinessCustomer.Api.CustomerFeature.MultipleCustomersViewModel">
@@ -75,12 +105,6 @@
             <summary>
             The model exposed to my frontend
             </summary>
-        </member>
-        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.SingleCustomerViewModel.#ctor(Cds.BusinessCustomer.Infrastructure.CustomerRepository.Dtos.CustomerSingleSearchDTO)">
-            <summary>
-            Constructor
-            </summary>
-            <param name="businessCustomer"></param>
         </member>
         <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.SingleCustomerViewModel.Name">
             <summary>
@@ -147,9 +171,14 @@
             <param name="zipcode"></param>
             <returns></returns>
         </member>
+        <member name="T:Cds.BusinessCustomer.Api.CustomerFeature.Validation.ParametersHandler">
+            <summary>
+            Class for parameters validation
+            </summary>
+        </member>
         <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.Validation.ParametersHandler.Validate(System.String)">
             <summary>
-            Validation for parameter : siret
+            Validation for parameter : siret - should be of length 14
             </summary>
             <param name="siret"></param>
             <returns></returns>
