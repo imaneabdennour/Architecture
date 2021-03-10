@@ -1,6 +1,5 @@
-﻿using Cds.BusinessCustomer.Api.CustomerFeature.Validation;
-using Cds.BusinessCustomer.Domain.CustomerAggregate;
-using Cds.BusinessCustomer.Domain.CustomerAggregate.Exceptions;
+﻿using Cds.BusinessCustomer.Api.CustomerFeature.Conversion;
+using Cds.BusinessCustomer.Api.CustomerFeature.Validation;
 using Cds.BusinessCustomer.Infrastructure.CustomerRepository.Abstractions;
 using Cds.BusinessCustomer.Infrastructure.CustomerRepository.Dtos;
 using Microsoft.AspNetCore.Http;
@@ -8,7 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
@@ -16,7 +14,7 @@ using System.Threading.Tasks;
 namespace Cds.BusinessCustomer.Api.CustomerFeature
 {
     /// <summary>
-    /// Customer Controller
+    /// Business Customer Controller
     /// </summary>
     public class BusinessCustomerController : Controller
     {
@@ -60,14 +58,14 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
                     if (! res.Item1)
                         return BadRequest(new { code = "400", message = res.Item2 });                                   
 
-                    var response = await _service.GetInfosBySiret(siret);
+                    CustomerSingleSearchDTO response = await _service.GetInfosBySiret(siret);
 
                     if (response == null)
                     {
                         return NotFound("There is no business customer with such siret");      //404      
                     }
 
-                    return Ok(new SingleCustomerViewModel(response));    //200
+                    return Ok(Converts.ToViewModel(response));    //200
                 }
 
                 // recherche par raison sociale et code postal :
@@ -83,10 +81,8 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
                     {
                         return NotFound("There is no business customer with such social reason and zipcode");
                     }
-                    // converting from Model to ViewModel :o :o 
-                    List<MultipleCustomersViewModel> list = response.Select(e => new MultipleCustomersViewModel(e)).ToList();
 
-                    return Ok(list);    //200
+                    return Ok(Converts.ToViewModel(response));    //200
                 }
             }
             catch (Exception)
@@ -102,23 +98,23 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
         /// <param name="Id"></param>
         /// <returns></returns>
         [HttpGet("business-customer-information/{Id}")]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Customer))]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(SingleCustomerViewModel))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<SingleCustomerViewModel>> SearchById([FromRoute] string Id)
         {
             try
             {
-                var response = await _service.GetInfosById(Id);
+                CustomerSingleSearchDTO response = await _service.GetInfosById(Id);
                 if (response == null)
                 {
                     return NotFound("There is no such business customer with such id ");      //404
                 }
-                return Ok(new SingleCustomerViewModel(response));
+                return Ok(Converts.ToViewModel(response));
             }
-            catch (InternalServerException ex)
+            catch (Exception ex)
             {
-                //throw new InternalServerException();
+                _logger.LogError("Failed to retreive customer - Internal Server Error");
                 return StatusCode(500);     //500
 
             }

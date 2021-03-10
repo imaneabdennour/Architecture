@@ -36,5 +36,6 @@ namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository.Dtos
         /// </summary>
         [JsonProperty("adresse4")]
         public string Adress { get; set; }
+
     }
 }

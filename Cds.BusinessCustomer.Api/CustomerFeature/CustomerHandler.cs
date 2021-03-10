@@ -7,15 +7,27 @@ using System.Threading.Tasks;
 
 namespace Cds.BusinessCustomer.Api.CustomerFeature
 {
+    /// <summary>
+    /// Class for handling query params
+    /// </summary>
     public class CustomerHandler
     {
         private readonly ILogger<CustomerHandler> _logger;
 
+        /// <summary>
+        /// Constructor for Customer Handler
+        /// </summary>
+        /// <param name="logger"></param>
         public CustomerHandler(ILogger<CustomerHandler> logger)
         {
             _logger = logger;
         }
 
+        /// <summary>
+        /// Validation of param : siret - should be of length 14
+        /// </summary>
+        /// <param name="siret"></param>
+        /// <returns></returns>
         public bool Validate(string siret)
         {
             if (siret.Length != 14)
