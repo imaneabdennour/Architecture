@@ -19,7 +19,7 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
     /// </summary>
     public class BusinessCustomerController : Controller
     {
-        private readonly ICartegieRepository _service;
+        private readonly ICartegieApi _service;
         private readonly ILogger<BusinessCustomerController> _logger;
         private readonly IParametersHandler _handler;
 
@@ -29,7 +29,7 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
         /// <param name="service"></param>
         /// <param name="logger"></param>
         /// <param name="handler"></param>
-        public BusinessCustomerController(ICartegieRepository service, ILogger<BusinessCustomerController> logger, IParametersHandler handler)
+        public BusinessCustomerController(ICartegieApi service, ILogger<BusinessCustomerController> logger, IParametersHandler handler)
         {
             _service = service ?? throw new ArgumentNullException(nameof(service)); ;
             _logger = logger ?? throw new ArgumentNullException(nameof(logger)); ;
@@ -64,7 +64,7 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
                     if (response == null)
                         return NotFound("There is no business customer with such siret");      //404      
 
-                    return Ok(Converts.ToViewModel(response));    //200
+                    return Ok(response.ToViewModel());    //200
                 }
 
                 // recherche par raison sociale et code postal :
@@ -79,7 +79,7 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
                     if (response == null)
                         return NotFound("There is no business customer with such social reason and zipcode");
                     
-                    return Ok(Converts.ToViewModel(response));    //200
+                    return Ok(response.ToViewModel());    //200
                 }
             }
             catch (Exception)
@@ -107,7 +107,7 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
                 {
                     return NotFound("There is no such business customer with such id ");      //404
                 }
-                return Ok(Converts.ToViewModel(response));
+                return Ok(response.ToViewModel());
             }
             catch (Exception ex)
             {

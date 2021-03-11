@@ -5,12 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
+    <Compile Remove="CustomerAggregate\Abstractions\**" />
+    <EmbeddedResource Remove="CustomerAggregate\Abstractions\**" />
+    <None Remove="CustomerAggregate\Abstractions\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="CustomerAggregate\Abstractions\" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
   </ItemGroup>
 
 </Project>

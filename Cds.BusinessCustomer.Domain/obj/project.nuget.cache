@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6RL4SmoPlg7YxBYF+Sk1Mij3cyB0TijXpRW3MFXJcBCwscRvT72SgSWGDyP4N7Wp7mk5oNS/QT+eqnvEIqsCAw==",
+  "dgSpecHash": "5ypK9lZpLPmLQLUmWaR+GqLYon3YkK01CIcT9fSEIS14L+rpfw343Gl5fWh5oBtRrXxeafgfdDYim+E7MQRkfw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\imane.abdennour\\Source\\Repos\\Architecture-v1\\Cds.BusinessCustomer.Domain\\Cds.BusinessCustomer.Domain.csproj",
+  "projectFilePath": "C:\\Users\\imane.abdennour\\Source\\Repos\\Architecture-v22\\Cds.BusinessCustomer.Domain\\Cds.BusinessCustomer.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\imane.abdennour\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\imane.abdennour\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",

@@ -14,14 +14,14 @@ using System.Threading.Tasks;
 
 namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository
 {
-    public class CartegieRepository :  ICartegieRepository
+    public class CartegieApi :  ICartegieApi
     {
         CartegieConfiguration _configuration;
         string baseUrl;
         string apiKey;
 
 
-        public CartegieRepository(CartegieConfiguration myConfiguration)
+        public CartegieApi(CartegieConfiguration myConfiguration)
         {
             _configuration = myConfiguration;
 
@@ -37,7 +37,10 @@ namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository
         // DTO
         public Task<CustomerSingleSearchDTO> GetInfosById(string id)
         {
-            CustomerSingleSearchDTO consumerInfo = SingleSearch(_configuration.ById).Result;
+            if(id.Equals(null))
+                return Task.FromResult<CustomerSingleSearchDTO>(null);
+
+            CustomerSingleSearchDTO consumerInfo = IdSearch(id).Result;
             if(consumerInfo == null)
             {
                 return Task.FromResult<CustomerSingleSearchDTO>(null);
@@ -52,7 +55,7 @@ namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository
         /// <returns></returns>
         public Task<CustomerSingleSearchDTO> GetInfosBySiret(string siret)
         {
-            CustomerSingleSearchDTO consumerInfo = SingleSearch(_configuration.BySiret).Result;
+            CustomerSingleSearchDTO consumerInfo = IdSearch(siret).Result;
             return Task.FromResult(consumerInfo);
         }
 
@@ -64,7 +67,7 @@ namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository
         /// <returns></returns>
         public Task<List<CustomerMultipleSearchDTO>> GetInfosByCriteria(string socialReason, string zipCode)
         {
-            List<CustomerMultipleSearchDTO> list = MultipleSearch(_configuration.ByMultiple).Result;
+            List<CustomerMultipleSearchDTO> list = MultipleSearch(socialReason, zipCode).Result;
             if(list == null || list.Count == 0)
             {
                 return Task.FromResult<List<CustomerMultipleSearchDTO>>(null);
@@ -77,14 +80,17 @@ namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository
 
 
         /// <summary>
-        /// Method to handle Cartégie api - searching by id or siret
+        /// Method to handle Cartégie api - searching by id
         /// </summary>
         /// <param name="param"></param>
+        /// <param name="id"></param>
         /// <returns></returns>
-        private async Task<CustomerSingleSearchDTO> SingleSearch(string param)
+        private async Task<CustomerSingleSearchDTO> IdSearch(string id)
         {
-            Console.WriteLine("helloo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-            CustomerSingleSearchDTO ConsumerInfo = new CustomerSingleSearchDTO() { Adress="vbuki"};
+            if (id.Equals(null))
+                return await Task.FromResult<CustomerSingleSearchDTO>(null);
+            
+            CustomerSingleSearchDTO ConsumerInfo = new CustomerSingleSearchDTO();
 
             using (var client = new HttpClient())
             {
@@ -94,21 +100,61 @@ namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 // status code and data :
-                HttpResponseMessage res = await client.GetAsync(param);
+                HttpResponseMessage res = await client.GetAsync(_configuration.ById);
 
                 if (res.IsSuccessStatusCode)
                 {
-                    // Storing the response details received from web api   
-                    var EmpResponse = res.Content.ReadAsStringAsync().Result;
-                    if (EmpResponse == null)
-                    {
+                    ConsumerInfo = FromResponseToDto(res);
+                    if (ConsumerInfo == null)
                         return await Task.FromResult<CustomerSingleSearchDTO>(null);
-                    }
-                    // Deserializing the response recieved from web api and storing it  
-                    ConsumerInfo = JsonConvert.DeserializeObject<CustomerSingleSearchDTO>(EmpResponse.Substring(1, EmpResponse.Length - 2));
                 }
             }
             return ConsumerInfo;
+        }
+
+        /// <summary>
+        /// Method to handle Cartégie api - searching by id
+        /// </summary>
+        /// <param name="param"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        private async Task<CustomerSingleSearchDTO> SiretSearch(string siret)
+        {
+            if (siret.Equals(null))
+                return await Task.FromResult<CustomerSingleSearchDTO>(null);
+
+            CustomerSingleSearchDTO ConsumerInfo = new CustomerSingleSearchDTO();
+
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(baseUrl);
+
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                // status code and data :
+                HttpResponseMessage res = await client.GetAsync(_configuration.BySiret);
+
+                if (res.IsSuccessStatusCode)
+                {
+                    ConsumerInfo = FromResponseToDto(res);
+                    if(ConsumerInfo == null) 
+                        return await Task.FromResult<CustomerSingleSearchDTO>(null);
+                }
+            }
+            return ConsumerInfo;
+        }
+
+        public CustomerSingleSearchDTO FromResponseToDto(HttpResponseMessage res)
+        {
+            // Storing the response details received from web api   
+            var EmpResponse = res.Content.ReadAsStringAsync().Result;
+            if (EmpResponse == null)
+            {
+                return null;
+            }
+            // Deserializing the response received from web api and storing it  
+            return JsonConvert.DeserializeObject<CustomerSingleSearchDTO>(EmpResponse.Substring(1, EmpResponse.Length - 2));
         }
 
         /// <summary>
@@ -116,8 +162,11 @@ namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository
         /// </summary>
         /// <param name="param"></param>
         /// <returns></returns>
-        private async Task<List<CustomerMultipleSearchDTO>> MultipleSearch(string param)
+        private async Task<List<CustomerMultipleSearchDTO>> MultipleSearch(string socialReason, string zipcode)
         {
+            if (socialReason.Equals(null) || zipcode.Equals(null))
+                return await Task.FromResult<List<CustomerMultipleSearchDTO>>(null);
+
             var consumerInfo = new List<CustomerMultipleSearchDTO>();
 
             using (var client = new HttpClient())
@@ -128,7 +177,7 @@ namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 // status code and data :
-                HttpResponseMessage res = await client.GetAsync(param);
+                HttpResponseMessage res = await client.GetAsync(_configuration.ByMultiple);
 
                 if (res.IsSuccessStatusCode)
                 {

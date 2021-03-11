@@ -9,7 +9,7 @@
             Business Customer Controller
             </summary>
         </member>
-        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.BusinessCustomerController.#ctor(Cds.BusinessCustomer.Infrastructure.CustomerRepository.Abstractions.ICartegieRepository,Microsoft.Extensions.Logging.ILogger{Cds.BusinessCustomer.Api.CustomerFeature.BusinessCustomerController},Cds.BusinessCustomer.Api.CustomerFeature.Validation.IParametersHandler)">
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.BusinessCustomerController.#ctor(Cds.BusinessCustomer.Infrastructure.CustomerRepository.Abstractions.ICartegieApi,Microsoft.Extensions.Logging.ILogger{Cds.BusinessCustomer.Api.CustomerFeature.BusinessCustomerController},Cds.BusinessCustomer.Api.CustomerFeature.Validation.IParametersHandler)">
             <summary>
             Constructor for BusinessCustomerController
             </summary>
@@ -39,24 +39,24 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="T:Cds.BusinessCustomer.Api.CustomerFeature.Conversion.Converts">
+        <member name="T:Cds.BusinessCustomer.Api.CustomerFeature.Conversion.CustomerExtension">
             <summary>
             Class for converting types
             </summary>
         </member>
-        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.Conversion.Converts.ToViewModel(Cds.BusinessCustomer.Infrastructure.CustomerRepository.Dtos.CustomerSingleSearchDTO)">
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.Conversion.CustomerExtension.ToViewModel(Cds.BusinessCustomer.Infrastructure.CustomerRepository.Dtos.CustomerSingleSearchDTO)">
             <summary>
             Converts from DTO to ViewModel - for single search
             </summary>
             <param name="businessCustomer"></param>
         </member>
-        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.Conversion.Converts.ToViewModel(System.Collections.Generic.List{Cds.BusinessCustomer.Infrastructure.CustomerRepository.Dtos.CustomerMultipleSearchDTO})">
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.Conversion.CustomerExtension.ToViewModel(System.Collections.Generic.List{Cds.BusinessCustomer.Infrastructure.CustomerRepository.Dtos.CustomerMultipleSearchDTO})">
             <summary>
             Converts from list of DTO to list of ViewModel - for multiple search
             </summary>
             <param name="businessCustomers"></param>
         </member>
-        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.Conversion.Converts.ToViewModel(Cds.BusinessCustomer.Infrastructure.CustomerRepository.Dtos.CustomerMultipleSearchDTO)">
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.Conversion.CustomerExtension.ToViewModel(Cds.BusinessCustomer.Infrastructure.CustomerRepository.Dtos.CustomerMultipleSearchDTO)">
             <summary>
             Converts from single DTO to single ViewModel - for multiple search
             </summary>

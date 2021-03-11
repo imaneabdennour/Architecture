@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository.Abstractions
 {
-    public interface ICartegieRepository
+    public interface ICartegieApi
     {
         /// <summary>
         /// Gets list of Customer information by criteria : social reason + zip code

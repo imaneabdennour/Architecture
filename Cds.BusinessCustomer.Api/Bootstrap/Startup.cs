@@ -60,7 +60,7 @@ namespace Cds.BusinessCustomer.Api.Bootstrap
            // services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             // DI : 
-            services.AddScoped<ICartegieRepository, CartegieRepository>();  
+            services.AddScoped<ICartegieApi, CartegieApi>();  
             // Registers api handler.
             services.AddScoped<IParametersHandler, ParametersHandler>();
 

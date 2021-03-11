@@ -5061,11 +5061,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\imane.abdennour\\Source\\Repos\\Architecture-v1\\Cds.BusinessCustomer.Api\\Cds.BusinessCustomer.Api.csproj",
+      "projectUniqueName": "C:\\Users\\imane.abdennour\\Source\\Repos\\Architecture-v22\\Cds.BusinessCustomer.Api\\Cds.BusinessCustomer.Api.csproj",
       "projectName": "Cds.BusinessCustomer.Api",
-      "projectPath": "C:\\Users\\imane.abdennour\\Source\\Repos\\Architecture-v1\\Cds.BusinessCustomer.Api\\Cds.BusinessCustomer.Api.csproj",
+      "projectPath": "C:\\Users\\imane.abdennour\\Source\\Repos\\Architecture-v22\\Cds.BusinessCustomer.Api\\Cds.BusinessCustomer.Api.csproj",
       "packagesPath": "C:\\Users\\imane.abdennour\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\imane.abdennour\\Source\\Repos\\Architecture-v1\\Cds.BusinessCustomer.Api\\obj\\",
+      "outputPath": "C:\\Users\\imane.abdennour\\Source\\Repos\\Architecture-v22\\Cds.BusinessCustomer.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5085,11 +5085,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\imane.abdennour\\Source\\Repos\\Architecture-v1\\Cds.BusinessCustomer.Domain\\Cds.BusinessCustomer.Domain.csproj": {
-              "projectPath": "C:\\Users\\imane.abdennour\\Source\\Repos\\Architecture-v1\\Cds.BusinessCustomer.Domain\\Cds.BusinessCustomer.Domain.csproj"
+            "C:\\Users\\imane.abdennour\\Source\\Repos\\Architecture-v22\\Cds.BusinessCustomer.Domain\\Cds.BusinessCustomer.Domain.csproj": {
+              "projectPath": "C:\\Users\\imane.abdennour\\Source\\Repos\\Architecture-v22\\Cds.BusinessCustomer.Domain\\Cds.BusinessCustomer.Domain.csproj"
             },
-            "C:\\Users\\imane.abdennour\\Source\\Repos\\Architecture-v1\\Cds.BusinessCustomer.Infrastructure\\Cds.BusinessCustomer.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\imane.abdennour\\Source\\Repos\\Architecture-v1\\Cds.BusinessCustomer.Infrastructure\\Cds.BusinessCustomer.Infrastructure.csproj"
+            "C:\\Users\\imane.abdennour\\Source\\Repos\\Architecture-v22\\Cds.BusinessCustomer.Infrastructure\\Cds.BusinessCustomer.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\imane.abdennour\\Source\\Repos\\Architecture-v22\\Cds.BusinessCustomer.Infrastructure\\Cds.BusinessCustomer.Infrastructure.csproj"
             }
           }
         }
