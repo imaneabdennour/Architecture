@@ -44,7 +44,8 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
         /// <param name="siret"></param>
         /// <returns></returns>
         [HttpGet("business-customer-information")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(SingleCustomerViewModel))]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(MultipleCustomersViewModel))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -90,7 +91,7 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature
         }
 
         /// <summary>
-        /// Research by Siret - of the information about the business customer
+        /// Research by Id - of the information about the business customer
         /// </summary>
         /// <param name="Id"></param>
         /// <returns></returns>

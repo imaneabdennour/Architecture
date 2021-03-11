@@ -25,7 +25,12 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature.Conversion
                     Name = businessCustomer.Name,
                     Adress = businessCustomer.Adress,
                     Siret = businessCustomer.Siret,
-                    NafCode = businessCustomer.NafCode
+                    NafCode = businessCustomer.NafCode,
+                    Phone = businessCustomer.Phone,
+                    ZipCode = businessCustomer.ZipCode,
+                    City = businessCustomer.SocialReason,
+                    Civility = businessCustomer.Civility,
+                    SocialReason = businessCustomer.SocialReason
                 };
             }
             return null;
@@ -58,8 +63,8 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature.Conversion
                 {
                     Id = e.Id,
                     Name = e.Name,
-                    Adress = e.Adress,
-                    ZipCode = e.ZipCode
+                    Adress = e.Adress,                 
+                    SocialReason = e.SocialReason,
                 };
             }
             return null;

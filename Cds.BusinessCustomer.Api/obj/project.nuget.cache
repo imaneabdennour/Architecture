@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5WsF6C+lSUyfq7JOD9RdNJj29ab7wd1pzS4eUwI6MciZ03Yi+rBqLMJGkMe2GX0IHwZDvsdX0lAA2AhehTUgvw==",
+  "dgSpecHash": "QoOUfRZCiMX5QNEUUVj+Md7m6sOjna9Zeg4v73qaoPKa2cyuZIcyBAiPIGkS1CrvtFIIb9dpEU10yG3KAVlHNw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\imane.abdennour\\Source\\Repos\\Architecture-v22\\Cds.BusinessCustomer.Api\\Cds.BusinessCustomer.Api.csproj",
+  "projectFilePath": "C:\\Users\\imane.abdennour\\source\\repos\\Architecture-v22\\Cds.BusinessCustomer.Api\\Cds.BusinessCustomer.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\imane.abdennour\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
     "C:\\Users\\imane.abdennour\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",

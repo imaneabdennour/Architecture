@@ -28,7 +28,7 @@
         </member>
         <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.BusinessCustomerController.SearchById(System.String)">
             <summary>
-            Research by Siret - of the information about the business customer
+            Research by Id - of the information about the business customer
             </summary>
             <param name="Id"></param>
             <returns></returns>
@@ -147,9 +147,9 @@
             Adress
             </summary>
         </member>
-        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.ViewModels.MultipleCustomersViewModel.ZipCode">
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.ViewModels.MultipleCustomersViewModel.SocialReason">
             <summary>
-            Zip code
+            Social reason
             </summary>
         </member>
         <member name="T:Cds.BusinessCustomer.Api.CustomerFeature.ViewModels.SingleCustomerViewModel">

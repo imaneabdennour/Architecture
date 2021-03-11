@@ -36,6 +36,36 @@ namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository.Dtos
         /// </summary>
         [JsonProperty("adresse4")]
         public string Adress { get; set; }
-       
+
+        /// <summary>
+        /// Zip code
+        /// </summary>
+        [JsonProperty("codpos")]
+        public string ZipCode { get; set; }
+
+        /// <summary>
+        /// City
+        /// </summary>
+        [JsonProperty("lib_commune")]
+        public string City { get; set; }
+
+        /// <summary>
+        /// Social reason
+        /// </summary>
+        [JsonProperty("rs")]
+        public string SocialReason { get; set; }
+
+        /// <summary>
+        /// Civility
+        /// </summary>
+        [JsonProperty("civilite")]
+        public string Civility { get; set; }
+
+        /// <summary>
+        /// Phone
+        /// </summary>
+        [JsonProperty("tel")]
+        public string Phone { get; set; }
+
     }
 }

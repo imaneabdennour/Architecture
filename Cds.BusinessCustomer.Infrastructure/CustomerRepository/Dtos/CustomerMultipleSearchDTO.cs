@@ -27,15 +27,13 @@ namespace Cds.BusinessCustomer.Infrastructure.CustomerRepository.Dtos
         /// <summary>
         /// Adress
         /// </summary>
-        [JsonProperty("adress4")]
+        [JsonProperty("adresse4")]
         public string Adress { get; set; }
 
         /// <summary>
-        /// Zip code
+        /// Social reason
         /// </summary>
-        [JsonProperty("codpos")]
-        public string ZipCode { get; set; }
-
-
+        [JsonProperty("rs")]
+        public string SocialReason { get; set; }
     }
 }

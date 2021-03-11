@@ -36,8 +36,9 @@ namespace Cds.BusinessCustomer.Api.CustomerFeature.ViewModels
         public string Adress { get; set; }
 
         /// <summary>
-        /// Zip code
+        /// Social reason
         /// </summary>
-        public string ZipCode { get; set; }
+        public string SocialReason { get; set; }
+
     }
 }
