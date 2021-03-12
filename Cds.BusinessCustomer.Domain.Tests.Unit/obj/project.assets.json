@@ -33,11 +33,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Domain.Tests.Unit\\Cds.BusinessCustomer.Domain.Tests.Unit.csproj",
+      "projectUniqueName": "C:\\Users\\imane.abdennour\\Desktop\\Architecture-v3\\Cds.BusinessCustomer.Domain.Tests.Unit\\Cds.BusinessCustomer.Domain.Tests.Unit.csproj",
       "projectName": "Cds.BusinessCustomer.Domain.Tests.Unit",
-      "projectPath": "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Domain.Tests.Unit\\Cds.BusinessCustomer.Domain.Tests.Unit.csproj",
+      "projectPath": "C:\\Users\\imane.abdennour\\Desktop\\Architecture-v3\\Cds.BusinessCustomer.Domain.Tests.Unit\\Cds.BusinessCustomer.Domain.Tests.Unit.csproj",
       "packagesPath": "C:\\Users\\imane.abdennour\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Domain.Tests.Unit\\obj\\",
+      "outputPath": "C:\\Users\\imane.abdennour\\Desktop\\Architecture-v3\\Cds.BusinessCustomer.Domain.Tests.Unit\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -56,8 +56,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Domain\\Cds.BusinessCustomer.Domain.csproj": {
-              "projectPath": "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Domain\\Cds.BusinessCustomer.Domain.csproj"
+            "C:\\Users\\imane.abdennour\\Desktop\\Architecture-v3\\Cds.BusinessCustomer.Domain\\Cds.BusinessCustomer.Domain.csproj": {
+              "projectPath": "C:\\Users\\imane.abdennour\\Desktop\\Architecture-v3\\Cds.BusinessCustomer.Domain\\Cds.BusinessCustomer.Domain.csproj"
             }
           }
         }

@@ -1,0 +1,40 @@
+{
+  "consumer": {
+    "name": "CustomerWeb"
+  },
+  "provider": {
+    "name": "CustomerApi"
+  },
+  "interactions": [
+    {
+      "description": "A GET request to retreive businner customer details",
+      "providerState": "Customer",
+      "request": {
+        "method": "get",
+        "path": "/business-customer-information/a40354012"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": {
+          "name": "UBER PARTNER SUPPORT FRANCE SAS",
+          "siret": "81999478100022",
+          "nafCode": "8299Z",
+          "adress": "",
+          "phone": null,
+          "zipCode": "33000",
+          "city": "UBER PARTNER SUPPORT FRANCE SAS",
+          "socialReason": "UBER PARTNER SUPPORT FRANCE SAS",
+          "civility": null
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}

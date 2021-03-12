@@ -1,0 +1,58 @@
+I, [2021-03-12T17:11:39.181119 #7112]  INFO -- : Cleared interactions for example ""
+I, [2021-03-12T17:11:39.333120 #7112]  INFO -- : Registered expected interaction GET /business-customer-information/a40354012
+D, [2021-03-12T17:11:39.334120 #7112] DEBUG -- : {
+  "description": "A GET request to retreive businner customer details",
+  "providerState": "Customer",
+  "request": {
+    "method": "get",
+    "path": "/business-customer-information/a40354012"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": {
+      "name": "UBER PARTNER SUPPORT FRANCE SAS",
+      "siret": "81999478100022",
+      "nafCode": "8299Z",
+      "adress": "",
+      "phone": null,
+      "zipCode": "33000",
+      "city": "UBER PARTNER SUPPORT FRANCE SAS",
+      "socialReason": "UBER PARTNER SUPPORT FRANCE SAS",
+      "civility": null
+    }
+  },
+  "metadata": null
+}
+I, [2021-03-12T17:11:39.348122 #7112]  INFO -- : Received request GET /business-customer-information/a40354012
+D, [2021-03-12T17:11:39.349121 #7112] DEBUG -- : {
+  "path": "/business-customer-information/a40354012",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:9222",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2021-03-12T17:11:39.351122 #7112]  INFO -- : Found matching response for GET /business-customer-information/a40354012
+D, [2021-03-12T17:11:39.351122 #7112] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json; charset=utf-8"
+  },
+  "body": {
+    "name": "UBER PARTNER SUPPORT FRANCE SAS",
+    "siret": "81999478100022",
+    "nafCode": "8299Z",
+    "adress": "",
+    "phone": null,
+    "zipCode": "33000",
+    "city": "UBER PARTNER SUPPORT FRANCE SAS",
+    "socialReason": "UBER PARTNER SUPPORT FRANCE SAS",
+    "civility": null
+  }
+}
+I, [2021-03-12T17:11:39.403120 #7112]  INFO -- : Writing pact for CustomerApi to ../../../../Pacts/customerweb-customerapi.json
+I, [2021-03-12T17:11:39.424127 #7112]  INFO -- : Cleared interactions for example ""

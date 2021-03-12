@@ -1,0 +1,82 @@
+# Logfile created on 2021-03-12 15:57:30 +0100 by logger.rb/47272
+I, [2021-03-12T16:31:11.658742 #10232]  INFO -- : Running example 'Verifying a pact between Client and Customer Given Customer A GET request to retreive businner customer details with GET /business-customer-information/a40354012 returns a response which has status code 200'
+I, [2021-03-12T16:31:11.659743 #10232]  INFO -- : Sending GET request to path: "/business-customer-information/a40354012" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Customer"}]}, see debug logs for body
+D, [2021-03-12T16:31:11.659743 #10232] DEBUG -- : body :
+I, [2021-03-12T16:31:11.730743 #10232]  INFO -- : Running example 'Verifying a pact between Client and Customer Given Customer A GET request to retreive businner customer details with GET /business-customer-information/a40354012 returns a response which has a matching body'
+I, [2021-03-12T16:31:11.731743 #10232]  INFO -- : Sending GET request to path: "/business-customer-information/a40354012" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Customer"}]}, see debug logs for body
+D, [2021-03-12T16:31:11.732742 #10232] DEBUG -- : body :
+I, [2021-03-12T16:31:11.734743 #10232]  INFO -- : Running example 'Verifying a pact between Client and Customer Given Customer A GET request to retreive businner customer details with GET /business-customer-information/a40354012 returns a response which includes headers "Content-Type" which equals "application/json; charset=utf-8"'
+I, [2021-03-12T16:31:11.734743 #10232]  INFO -- : Sending GET request to path: "/business-customer-information/a40354012" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Customer"}]}, see debug logs for body
+D, [2021-03-12T16:31:11.734743 #10232] DEBUG -- : body :
+I, [2021-03-12T16:42:11.293564 #11908]  INFO -- : Running example 'Verifying a pact between Client and Customer Given Customer A GET request to retreive businner customer details with GET /business-customer-information/a40354012 returns a response which has status code 200'
+I, [2021-03-12T16:42:11.293564 #11908]  INFO -- : Sending GET request to path: "/business-customer-information/a40354012" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Customer"}]}, see debug logs for body
+D, [2021-03-12T16:42:11.293564 #11908] DEBUG -- : body :
+I, [2021-03-12T16:42:13.392647 #11908]  INFO -- : Running example 'Verifying a pact between Client and Customer Given Customer A GET request to retreive businner customer details with GET /business-customer-information/a40354012 returns a response which has a matching body'
+I, [2021-03-12T16:42:13.392647 #11908]  INFO -- : Sending GET request to path: "/business-customer-information/a40354012" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Customer"}]}, see debug logs for body
+D, [2021-03-12T16:42:13.393646 #11908] DEBUG -- : body :
+I, [2021-03-12T16:42:15.402889 #11908]  INFO -- : Running example 'Verifying a pact between Client and Customer Given Customer A GET request to retreive businner customer details with GET /business-customer-information/a40354012 returns a response which includes headers "Content-Type" which equals "application/json; charset=utf-8"'
+I, [2021-03-12T16:42:15.402889 #11908]  INFO -- : Sending GET request to path: "/business-customer-information/a40354012" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Customer"}]}, see debug logs for body
+D, [2021-03-12T16:42:15.403650 #11908] DEBUG -- : body :
+I, [2021-03-12T16:48:51.647948 #12504]  INFO -- : Running example 'Verifying a pact between Client and Customer Given Customer A GET request to retreive businner customer details with GET /business-customer-information/a40354012 returns a response which has status code 200'
+I, [2021-03-12T16:48:51.647948 #12504]  INFO -- : Sending GET request to path: "/business-customer-information/a40354012" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Customer"}]}, see debug logs for body
+D, [2021-03-12T16:48:51.648947 #12504] DEBUG -- : body :
+I, [2021-03-12T16:48:53.753953 #12504]  INFO -- : Running example 'Verifying a pact between Client and Customer Given Customer A GET request to retreive businner customer details with GET /business-customer-information/a40354012 returns a response which has a matching body'
+I, [2021-03-12T16:48:53.755119 #12504]  INFO -- : Sending GET request to path: "/business-customer-information/a40354012" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Customer"}]}, see debug logs for body
+D, [2021-03-12T16:48:53.755953 #12504] DEBUG -- : body :
+I, [2021-03-12T16:48:55.762787 #12504]  INFO -- : Running example 'Verifying a pact between Client and Customer Given Customer A GET request to retreive businner customer details with GET /business-customer-information/a40354012 returns a response which includes headers "Content-Type" which equals "application/json; charset=utf-8"'
+I, [2021-03-12T16:48:55.763698 #12504]  INFO -- : Sending GET request to path: "/business-customer-information/a40354012" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Customer"}]}, see debug logs for body
+D, [2021-03-12T16:48:55.763698 #12504] DEBUG -- : body :
+I, [2021-03-12T16:58:06.852522 #8168]  INFO -- : Running example 'Verifying a pact between Client and Customer Given Customer A GET request to retreive businner customer details with GET /business-customer-information/a40354012 returns a response which has status code 200'
+I, [2021-03-12T16:58:06.852522 #8168]  INFO -- : Sending GET request to path: "/business-customer-information/a40354012" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Customer"}]}, see debug logs for body
+D, [2021-03-12T16:58:06.853523 #8168] DEBUG -- : body :
+I, [2021-03-12T16:58:08.951300 #8168]  INFO -- : Running example 'Verifying a pact between Client and Customer Given Customer A GET request to retreive businner customer details with GET /business-customer-information/a40354012 returns a response which has a matching body'
+I, [2021-03-12T16:58:08.951300 #8168]  INFO -- : Sending GET request to path: "/business-customer-information/a40354012" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Customer"}]}, see debug logs for body
+D, [2021-03-12T16:58:08.952297 #8168] DEBUG -- : body :
+I, [2021-03-12T16:58:10.957570 #8168]  INFO -- : Running example 'Verifying a pact between Client and Customer Given Customer A GET request to retreive businner customer details with GET /business-customer-information/a40354012 returns a response which includes headers "Content-Type" which equals "application/json; charset=utf-8"'
+I, [2021-03-12T16:58:10.958567 #8168]  INFO -- : Sending GET request to path: "/business-customer-information/a40354012" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Customer"}]}, see debug logs for body
+D, [2021-03-12T16:58:10.958567 #8168] DEBUG -- : body :
+I, [2021-03-12T17:00:05.313434 #1156]  INFO -- : Running example 'Verifying a pact between Client and Customer Given Customer A GET request to retreive businner customer details with GET /business-customer-information/a40354012 returns a response which has status code 200'
+I, [2021-03-12T17:00:05.314433 #1156]  INFO -- : Sending GET request to path: "/business-customer-information/a40354012" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Customer"}]}, see debug logs for body
+D, [2021-03-12T17:00:05.314433 #1156] DEBUG -- : body :
+I, [2021-03-12T17:00:07.407284 #1156]  INFO -- : Running example 'Verifying a pact between Client and Customer Given Customer A GET request to retreive businner customer details with GET /business-customer-information/a40354012 returns a response which has a matching body'
+I, [2021-03-12T17:00:07.408279 #1156]  INFO -- : Sending GET request to path: "/business-customer-information/a40354012" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Customer"}]}, see debug logs for body
+D, [2021-03-12T17:00:07.408279 #1156] DEBUG -- : body :
+I, [2021-03-12T17:00:09.411771 #1156]  INFO -- : Running example 'Verifying a pact between Client and Customer Given Customer A GET request to retreive businner customer details with GET /business-customer-information/a40354012 returns a response which includes headers "Content-Type" which equals "application/json; charset=utf-8"'
+I, [2021-03-12T17:00:09.412765 #1156]  INFO -- : Sending GET request to path: "/business-customer-information/a40354012" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Customer"}]}, see debug logs for body
+D, [2021-03-12T17:00:09.412765 #1156] DEBUG -- : body :
+I, [2021-03-12T17:06:18.433462 #15768]  INFO -- : Running example 'Verifying a pact between Client and Customer Given Customer A GET request to retreive businner customer details with GET /business-customer-information/a40354012 returns a response which has status code 200'
+I, [2021-03-12T17:06:18.437120 #15768]  INFO -- : Sending GET request to path: "/business-customer-information/a40354012" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Customer"}]}, see debug logs for body
+D, [2021-03-12T17:06:18.437120 #15768] DEBUG -- : body :
+I, [2021-03-12T17:06:20.541763 #15768]  INFO -- : Running example 'Verifying a pact between Client and Customer Given Customer A GET request to retreive businner customer details with GET /business-customer-information/a40354012 returns a response which has a matching body'
+I, [2021-03-12T17:06:20.542764 #15768]  INFO -- : Sending GET request to path: "/business-customer-information/a40354012" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Customer"}]}, see debug logs for body
+D, [2021-03-12T17:06:20.542764 #15768] DEBUG -- : body :
+I, [2021-03-12T17:06:22.549130 #15768]  INFO -- : Running example 'Verifying a pact between Client and Customer Given Customer A GET request to retreive businner customer details with GET /business-customer-information/a40354012 returns a response which includes headers "Content-Type" which equals "application/json; charset=utf-8"'
+I, [2021-03-12T17:06:22.550129 #15768]  INFO -- : Sending GET request to path: "/business-customer-information/a40354012" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Customer"}]}, see debug logs for body
+D, [2021-03-12T17:06:22.550129 #15768] DEBUG -- : body :
+I, [2021-03-12T17:06:55.041123 #13816]  INFO -- : Running example 'Verifying a pact between Client and Customer Given Customer A GET request to retreive businner customer details with GET /business-customer-information/a40354012 returns a response which has status code 200'
+I, [2021-03-12T17:06:55.042126 #13816]  INFO -- : Sending GET request to path: "/business-customer-information/a40354012" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Customer"}]}, see debug logs for body
+D, [2021-03-12T17:06:55.043305 #13816] DEBUG -- : body :
+I, [2021-03-12T17:06:57.143561 #13816]  INFO -- : Running example 'Verifying a pact between Client and Customer Given Customer A GET request to retreive businner customer details with GET /business-customer-information/a40354012 returns a response which has a matching body'
+I, [2021-03-12T17:06:57.144559 #13816]  INFO -- : Sending GET request to path: "/business-customer-information/a40354012" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Customer"}]}, see debug logs for body
+D, [2021-03-12T17:06:57.144559 #13816] DEBUG -- : body :
+I, [2021-03-12T17:06:59.150820 #13816]  INFO -- : Running example 'Verifying a pact between Client and Customer Given Customer A GET request to retreive businner customer details with GET /business-customer-information/a40354012 returns a response which includes headers "Content-Type" which equals "application/json; charset=utf-8"'
+I, [2021-03-12T17:06:59.151818 #13816]  INFO -- : Sending GET request to path: "/business-customer-information/a40354012" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Customer"}]}, see debug logs for body
+D, [2021-03-12T17:06:59.151818 #13816] DEBUG -- : body :
+I, [2021-03-12T17:11:49.287886 #14732]  INFO -- : Running example 'Verifying a pact between Client and Customer Given Customer A GET request to retreive businner customer details with GET /business-customer-information/a40354012 returns a response which has status code 200'
+I, [2021-03-12T17:11:49.288886 #14732]  INFO -- : Sending GET request to path: "/business-customer-information/a40354012" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Customer"}]}, see debug logs for body
+D, [2021-03-12T17:11:49.290885 #14732] DEBUG -- : body :
+I, [2021-03-12T17:11:51.396847 #14732]  INFO -- : Running example 'Verifying a pact between Client and Customer Given Customer A GET request to retreive businner customer details with GET /business-customer-information/a40354012 returns a response which has a matching body'
+I, [2021-03-12T17:11:51.396847 #14732]  INFO -- : Sending GET request to path: "/business-customer-information/a40354012" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Customer"}]}, see debug logs for body
+D, [2021-03-12T17:11:51.396847 #14732] DEBUG -- : body :
+I, [2021-03-12T17:11:53.403176 #14732]  INFO -- : Running example 'Verifying a pact between Client and Customer Given Customer A GET request to retreive businner customer details with GET /business-customer-information/a40354012 returns a response which includes headers "Content-Type" which equals "application/json; charset=utf-8"'
+I, [2021-03-12T17:11:53.404172 #14732]  INFO -- : Sending GET request to path: "/business-customer-information/a40354012" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Customer"}]}, see debug logs for body
+D, [2021-03-12T17:11:53.404172 #14732] DEBUG -- : body :
+I, [2021-03-12T17:20:12.847156 #4792]  INFO -- : Running example 'Verifying a pact between CustomerWeb and CustomerApi Given Customer A GET request to retreive businner customer details with GET /business-customer-information/a40354012 returns a response which has status code 200'
+I, [2021-03-12T17:20:12.847156 #4792]  INFO -- : Sending GET request to path: "/business-customer-information/a40354012" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Customer"}]}, see debug logs for body
+D, [2021-03-12T17:20:12.847156 #4792] DEBUG -- : body :
+I, [2021-03-12T17:20:14.951168 #4792]  INFO -- : Running example 'Verifying a pact between CustomerWeb and CustomerApi Given Customer A GET request to retreive businner customer details with GET /business-customer-information/a40354012 returns a response which has a matching body'
+I, [2021-03-12T17:20:14.952170 #4792]  INFO -- : Sending GET request to path: "/business-customer-information/a40354012" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Customer"}]}, see debug logs for body
+D, [2021-03-12T17:20:14.952170 #4792] DEBUG -- : body :
+I, [2021-03-12T17:20:16.968595 #4792]  INFO -- : Running example 'Verifying a pact between CustomerWeb and CustomerApi Given Customer A GET request to retreive businner customer details with GET /business-customer-information/a40354012 returns a response which includes headers "Content-Type" which equals "application/json; charset=utf-8"'
+I, [2021-03-12T17:20:16.968595 #4792]  INFO -- : Sending GET request to path: "/business-customer-information/a40354012" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Customer"}]}, see debug logs for body
+D, [2021-03-12T17:20:16.968595 #4792] DEBUG -- : body :
