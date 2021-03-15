@@ -34,3 +34,12 @@ C:\Users\imane.abdennour\Source\Repos\Architecture-v22\Cds.BusinessCustomer.Doma
 C:\Users\imane.abdennour\Source\Repos\Architecture-v22\Cds.BusinessCustomer.Domain\obj\Debug\netcoreapp3.1\Cds.BusinessCustomer.Domain.csproj.CoreCompileInputs.cache
 C:\Users\imane.abdennour\Source\Repos\Architecture-v22\Cds.BusinessCustomer.Domain\obj\Debug\netcoreapp3.1\Cds.BusinessCustomer.Domain.dll
 C:\Users\imane.abdennour\Source\Repos\Architecture-v22\Cds.BusinessCustomer.Domain\obj\Debug\netcoreapp3.1\Cds.BusinessCustomer.Domain.pdb
+C:\Architecture-v3\Cds.BusinessCustomer.Domain\bin\Debug\netcoreapp3.1\Cds.BusinessCustomer.Domain.deps.json
+C:\Architecture-v3\Cds.BusinessCustomer.Domain\bin\Debug\netcoreapp3.1\Cds.BusinessCustomer.Domain.dll
+C:\Architecture-v3\Cds.BusinessCustomer.Domain\bin\Debug\netcoreapp3.1\Cds.BusinessCustomer.Domain.pdb
+C:\Architecture-v3\Cds.BusinessCustomer.Domain\obj\Debug\netcoreapp3.1\Cds.BusinessCustomer.Domain.csprojAssemblyReference.cache
+C:\Architecture-v3\Cds.BusinessCustomer.Domain\obj\Debug\netcoreapp3.1\Cds.BusinessCustomer.Domain.AssemblyInfoInputs.cache
+C:\Architecture-v3\Cds.BusinessCustomer.Domain\obj\Debug\netcoreapp3.1\Cds.BusinessCustomer.Domain.AssemblyInfo.cs
+C:\Architecture-v3\Cds.BusinessCustomer.Domain\obj\Debug\netcoreapp3.1\Cds.BusinessCustomer.Domain.csproj.CoreCompileInputs.cache
+C:\Architecture-v3\Cds.BusinessCustomer.Domain\obj\Debug\netcoreapp3.1\Cds.BusinessCustomer.Domain.dll
+C:\Architecture-v3\Cds.BusinessCustomer.Domain\obj\Debug\netcoreapp3.1\Cds.BusinessCustomer.Domain.pdb

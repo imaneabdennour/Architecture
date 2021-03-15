@@ -336,11 +336,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\imane.abdennour\\Source\\Repos\\Architecture-v22\\Cds.BusinessCustomer.Domain\\Cds.BusinessCustomer.Domain.csproj",
+      "projectUniqueName": "C:\\Architecture-v3\\Cds.BusinessCustomer.Domain\\Cds.BusinessCustomer.Domain.csproj",
       "projectName": "Cds.BusinessCustomer.Domain",
-      "projectPath": "C:\\Users\\imane.abdennour\\Source\\Repos\\Architecture-v22\\Cds.BusinessCustomer.Domain\\Cds.BusinessCustomer.Domain.csproj",
+      "projectPath": "C:\\Architecture-v3\\Cds.BusinessCustomer.Domain\\Cds.BusinessCustomer.Domain.csproj",
       "packagesPath": "C:\\Users\\imane.abdennour\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\imane.abdennour\\Source\\Repos\\Architecture-v22\\Cds.BusinessCustomer.Domain\\obj\\",
+      "outputPath": "C:\\Architecture-v3\\Cds.BusinessCustomer.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

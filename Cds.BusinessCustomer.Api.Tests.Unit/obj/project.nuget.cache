@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "elRmLV7gXQWyYLyskJ3qRXFqtXYNAnB5fgLNlJruuNaV086vrcKEQryy05aMbfAs3fOXzzR3kjMpiOb100o1QA==",
+  "dgSpecHash": "R+DHGNV3K2kuYbdH5vEhi4mpQoFkjAKveSa3VccjdPOhnCWE9oND87AJ9KByTMI9Dc7vytCr5aWUbaqNvWV1wA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Api.Tests.Unit\\Cds.BusinessCustomer.Api.Tests.Unit.csproj",
+  "projectFilePath": "C:\\Architecture-v3\\Cds.BusinessCustomer.Api.Tests.Unit\\Cds.BusinessCustomer.Api.Tests.Unit.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\imane.abdennour\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\imane.abdennour\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",

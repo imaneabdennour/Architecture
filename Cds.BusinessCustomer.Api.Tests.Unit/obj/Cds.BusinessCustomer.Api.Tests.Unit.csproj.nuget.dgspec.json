@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Api.Tests.Unit\\Cds.BusinessCustomer.Api.Tests.Unit.csproj": {}
+    "C:\\Architecture-v3\\Cds.BusinessCustomer.Api.Tests.Unit\\Cds.BusinessCustomer.Api.Tests.Unit.csproj": {}
   },
   "projects": {
-    "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Api.Tests.Unit\\Cds.BusinessCustomer.Api.Tests.Unit.csproj": {
+    "C:\\Architecture-v3\\Cds.BusinessCustomer.Api.Tests.Unit\\Cds.BusinessCustomer.Api.Tests.Unit.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Api.Tests.Unit\\Cds.BusinessCustomer.Api.Tests.Unit.csproj",
+        "projectUniqueName": "C:\\Architecture-v3\\Cds.BusinessCustomer.Api.Tests.Unit\\Cds.BusinessCustomer.Api.Tests.Unit.csproj",
         "projectName": "Cds.BusinessCustomer.Api.Tests.Unit",
-        "projectPath": "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Api.Tests.Unit\\Cds.BusinessCustomer.Api.Tests.Unit.csproj",
+        "projectPath": "C:\\Architecture-v3\\Cds.BusinessCustomer.Api.Tests.Unit\\Cds.BusinessCustomer.Api.Tests.Unit.csproj",
         "packagesPath": "C:\\Users\\imane.abdennour\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Api.Tests.Unit\\obj\\",
+        "outputPath": "C:\\Architecture-v3\\Cds.BusinessCustomer.Api.Tests.Unit\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -31,8 +31,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Api\\Cds.BusinessCustomer.Api.csproj": {
-                "projectPath": "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Api\\Cds.BusinessCustomer.Api.csproj"
+              "C:\\Architecture-v3\\Cds.BusinessCustomer.Api\\Cds.BusinessCustomer.Api.csproj": {
+                "projectPath": "C:\\Architecture-v3\\Cds.BusinessCustomer.Api\\Cds.BusinessCustomer.Api.csproj"
               }
             }
           }
@@ -83,9 +83,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -94,14 +91,14 @@
         }
       }
     },
-    "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Api\\Cds.BusinessCustomer.Api.csproj": {
+    "C:\\Architecture-v3\\Cds.BusinessCustomer.Api\\Cds.BusinessCustomer.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Api\\Cds.BusinessCustomer.Api.csproj",
+        "projectUniqueName": "C:\\Architecture-v3\\Cds.BusinessCustomer.Api\\Cds.BusinessCustomer.Api.csproj",
         "projectName": "Cds.BusinessCustomer.Api",
-        "projectPath": "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Api\\Cds.BusinessCustomer.Api.csproj",
+        "projectPath": "C:\\Architecture-v3\\Cds.BusinessCustomer.Api\\Cds.BusinessCustomer.Api.csproj",
         "packagesPath": "C:\\Users\\imane.abdennour\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Api\\obj\\",
+        "outputPath": "C:\\Architecture-v3\\Cds.BusinessCustomer.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -121,11 +118,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Domain\\Cds.BusinessCustomer.Domain.csproj": {
-                "projectPath": "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Domain\\Cds.BusinessCustomer.Domain.csproj"
+              "C:\\Architecture-v3\\Cds.BusinessCustomer.Domain\\Cds.BusinessCustomer.Domain.csproj": {
+                "projectPath": "C:\\Architecture-v3\\Cds.BusinessCustomer.Domain\\Cds.BusinessCustomer.Domain.csproj"
               },
-              "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Infrastructure\\Cds.BusinessCustomer.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Infrastructure\\Cds.BusinessCustomer.Infrastructure.csproj"
+              "C:\\Architecture-v3\\Cds.BusinessCustomer.Infrastructure\\Cds.BusinessCustomer.Infrastructure.csproj": {
+                "projectPath": "C:\\Architecture-v3\\Cds.BusinessCustomer.Infrastructure\\Cds.BusinessCustomer.Infrastructure.csproj"
               }
             }
           }
@@ -175,14 +172,14 @@
         }
       }
     },
-    "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Domain\\Cds.BusinessCustomer.Domain.csproj": {
+    "C:\\Architecture-v3\\Cds.BusinessCustomer.Domain\\Cds.BusinessCustomer.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Domain\\Cds.BusinessCustomer.Domain.csproj",
+        "projectUniqueName": "C:\\Architecture-v3\\Cds.BusinessCustomer.Domain\\Cds.BusinessCustomer.Domain.csproj",
         "projectName": "Cds.BusinessCustomer.Domain",
-        "projectPath": "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Domain\\Cds.BusinessCustomer.Domain.csproj",
+        "projectPath": "C:\\Architecture-v3\\Cds.BusinessCustomer.Domain\\Cds.BusinessCustomer.Domain.csproj",
         "packagesPath": "C:\\Users\\imane.abdennour\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Domain\\obj\\",
+        "outputPath": "C:\\Architecture-v3\\Cds.BusinessCustomer.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -242,14 +239,14 @@
         }
       }
     },
-    "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Infrastructure\\Cds.BusinessCustomer.Infrastructure.csproj": {
+    "C:\\Architecture-v3\\Cds.BusinessCustomer.Infrastructure\\Cds.BusinessCustomer.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Infrastructure\\Cds.BusinessCustomer.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Architecture-v3\\Cds.BusinessCustomer.Infrastructure\\Cds.BusinessCustomer.Infrastructure.csproj",
         "projectName": "Cds.BusinessCustomer.Infrastructure",
-        "projectPath": "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Infrastructure\\Cds.BusinessCustomer.Infrastructure.csproj",
+        "projectPath": "C:\\Architecture-v3\\Cds.BusinessCustomer.Infrastructure\\Cds.BusinessCustomer.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\imane.abdennour\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Infrastructure\\obj\\",
+        "outputPath": "C:\\Architecture-v3\\Cds.BusinessCustomer.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -269,8 +266,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Domain\\Cds.BusinessCustomer.Domain.csproj": {
-                "projectPath": "C:\\Users\\imane.abdennour\\source\\repos\\Architecture\\Cds.BusinessCustomer.Domain\\Cds.BusinessCustomer.Domain.csproj"
+              "C:\\Architecture-v3\\Cds.BusinessCustomer.Domain\\Cds.BusinessCustomer.Domain.csproj": {
+                "projectPath": "C:\\Architecture-v3\\Cds.BusinessCustomer.Domain\\Cds.BusinessCustomer.Domain.csproj"
               }
             }
           }

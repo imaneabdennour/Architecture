@@ -1,3 +1,4 @@
+using Cds.BusinessCustomer.Api.CustomerFeature;
 using Cds.BusinessCustomer.Api.CustomerFeature.Validation;
 using Cds.BusinessCustomer.Infrastructure.CustomerRepository;
 using Cds.BusinessCustomer.Infrastructure.CustomerRepository.Abstractions;
@@ -25,7 +26,8 @@ namespace Cds.BusinessCustomer.Api.Bootstrap
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers()
+                .AddApplicationPart(typeof(BusinessCustomerController).Assembly);
 
             // Swagger
             services.AddSwaggerGen(options =>
@@ -70,7 +72,7 @@ namespace Cds.BusinessCustomer.Api.Bootstrap
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public virtual void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {

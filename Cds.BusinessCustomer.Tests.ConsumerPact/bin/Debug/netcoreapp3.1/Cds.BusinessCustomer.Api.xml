@@ -1,0 +1,212 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cds.BusinessCustomer.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Cds.BusinessCustomer.Api.CustomerFeature.BusinessCustomerController">
+            <summary>
+            Business Customer Controller
+            </summary>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.BusinessCustomerController.#ctor(Cds.BusinessCustomer.Infrastructure.CustomerRepository.Abstractions.ICartegieApi,Microsoft.Extensions.Logging.ILogger{Cds.BusinessCustomer.Api.CustomerFeature.BusinessCustomerController},Cds.BusinessCustomer.Api.CustomerFeature.Validation.IParametersHandler)">
+            <summary>
+            Constructor for BusinessCustomerController
+            </summary>
+            <param name="service"></param>
+            <param name="logger"></param>
+            <param name="handler"></param>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.BusinessCustomerController.SearchByMultipleCriteria(System.String,System.String,System.String)">
+            <summary>
+             Research by Social Reason and Zip Code OR Siret - of the information about the business customer
+            </summary>
+            <param name="socialReason"></param>
+            <param name="zipCode"></param>
+            <param name="siret"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.BusinessCustomerController.SearchById(System.String)">
+            <summary>
+            Research by Id - of the information about the business customer
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.BusinessCustomerController.GetHealthCheck">
+            <summary>
+            Health check for : HTTP
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Cds.BusinessCustomer.Api.CustomerFeature.Conversion.CustomerExtension">
+            <summary>
+            Class for converting types
+            </summary>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.Conversion.CustomerExtension.ToViewModel(Cds.BusinessCustomer.Infrastructure.CustomerRepository.Dtos.CustomerSingleSearchDTO)">
+            <summary>
+            Converts from DTO to ViewModel - for single search
+            </summary>
+            <param name="businessCustomer"></param>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.Conversion.CustomerExtension.ToViewModel(System.Collections.Generic.List{Cds.BusinessCustomer.Infrastructure.CustomerRepository.Dtos.CustomerMultipleSearchDTO})">
+            <summary>
+            Converts from list of DTO to list of ViewModel - for multiple search
+            </summary>
+            <param name="businessCustomers"></param>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.Conversion.CustomerExtension.ToViewModel(Cds.BusinessCustomer.Infrastructure.CustomerRepository.Dtos.CustomerMultipleSearchDTO)">
+            <summary>
+            Converts from single DTO to single ViewModel - for multiple search
+            </summary>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cds.BusinessCustomer.Api.CustomerFeature.CustomerHandler">
+            <summary>
+            Class for handling query params
+            </summary>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.CustomerHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Cds.BusinessCustomer.Api.CustomerFeature.CustomerHandler})">
+            <summary>
+            Constructor for Customer Handler
+            </summary>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.CustomerHandler.Validate(System.String)">
+            <summary>
+            Validation of param : siret - should be of length 14
+            </summary>
+            <param name="siret"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cds.BusinessCustomer.Api.CustomerFeature.Validation.IParametersHandler">
+            <summary>
+            Validation of input data
+            </summary>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.Validation.IParametersHandler.Validate(System.String)">
+            <summary>
+            Validation for parameter : siret
+            </summary>
+            <param name="siret"></param>
+            <returns>(bool, string) => (siret valide ou pas, message d'erreur au cas non valide)</returns>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.Validation.IParametersHandler.Validate(System.String,System.String)">
+            <summary>
+            Validation for parameters : socialreason and zipcode
+            </summary>
+            <param name="socialreason"></param>
+            <param name="zipcode"></param>
+            <returns>(bool, string) => (params valides ou pas, message d'erreur au cas non valides)</returns>
+        </member>
+        <member name="T:Cds.BusinessCustomer.Api.CustomerFeature.Validation.ParametersHandler">
+            <summary>
+            Class for parameters validation
+            </summary>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.Validation.ParametersHandler.Validate(System.String)">
+            <summary>
+            Validation for parameter : siret - should be of length 14
+            </summary>
+            <param name="siret"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.Validation.ParametersHandler.Validate(System.String,System.String)">
+            <summary>
+            Validation for parameters : socialreason and zipcode
+            </summary>
+            <param name="socialreason"></param>
+            <param name="zipcode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cds.BusinessCustomer.Api.CustomerFeature.ViewModels.MultipleCustomersViewModel">
+            <summary>
+            ViewModel for multiple customers
+            Exposed when searching by multiple params
+            </summary>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.ViewModels.MultipleCustomersViewModel.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.ViewModels.MultipleCustomersViewModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.ViewModels.MultipleCustomersViewModel.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.ViewModels.MultipleCustomersViewModel.Adress">
+            <summary>
+            Adress
+            </summary>
+        </member>
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.ViewModels.MultipleCustomersViewModel.SocialReason">
+            <summary>
+            Social reason
+            </summary>
+        </member>
+        <member name="T:Cds.BusinessCustomer.Api.CustomerFeature.ViewModels.SingleCustomerViewModel">
+            <summary>
+            ViewModel for single customer
+            Exposed when searching by single param
+            </summary>
+        </member>
+        <member name="M:Cds.BusinessCustomer.Api.CustomerFeature.ViewModels.SingleCustomerViewModel.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.ViewModels.SingleCustomerViewModel.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.ViewModels.SingleCustomerViewModel.Siret">
+            <summary>
+            Siret
+            </summary>
+        </member>
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.ViewModels.SingleCustomerViewModel.NafCode">
+            <summary>
+            Naf code
+            </summary>
+        </member>
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.ViewModels.SingleCustomerViewModel.Adress">
+            <summary>
+            Adress
+            </summary>
+        </member>
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.ViewModels.SingleCustomerViewModel.Phone">
+            <summary>
+            Phone Number
+            </summary>       
+        </member>
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.ViewModels.SingleCustomerViewModel.ZipCode">
+            <summary>
+            Zip Code
+            </summary>      
+        </member>
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.ViewModels.SingleCustomerViewModel.City">
+            <summary>
+            City
+            </summary>      
+        </member>
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.ViewModels.SingleCustomerViewModel.SocialReason">
+            <summary>
+            Social Reason
+            </summary>
+        </member>
+        <member name="P:Cds.BusinessCustomer.Api.CustomerFeature.ViewModels.SingleCustomerViewModel.Civility">
+            <summary>
+            Civility 
+            </summary>
+        </member>
+    </members>
+</doc>
