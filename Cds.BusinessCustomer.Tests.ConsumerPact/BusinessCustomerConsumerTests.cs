@@ -28,12 +28,8 @@ namespace Cds.BusinessCustomer.Tests.ConsumerPact
         [Fact]
         public async Task Given_Valid_Id_Customer_Should_Be_Returned()
         {
-            //string routePath = $"/sellers/9200/competing-offers-changes";
             var customerId = "a40354012";
-            //var responseBody = JsonConvert.DeserializeObject(await File.ReadAllTextAsync(@"Json/BusinessCustomerResponse.json")
-            //    .ConfigureAwait(false));
-
-
+            
             // ARRANGE 
             _mockProviderService
                 .Given("Customer")
@@ -72,13 +68,7 @@ namespace Cds.BusinessCustomer.Tests.ConsumerPact
             var customerDetails = JsonConvert.DeserializeObject<SingleCustomerViewModel>(json);
 
             string expected = "UBER PARTNER SUPPORT FRANCE SAS";
-            Assert.Equal(customerDetails.Name, expected);
-
-
-            //var httpResponse = await HttpClientHelper.ExecuteGetHttpActionAsync(new Uri(MockProviderServiceBaseUri, routePath)).ConfigureAwait(false);
-
-            //var responseContent = JsonConvert.DeserializeObject(await httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false));
-
+            Assert.Equal(expected, customerDetails.Name);
         }
     }
 }

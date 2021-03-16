@@ -32,7 +32,7 @@ namespace Cds.BusinessCustomer.Tests.ConsumerPact
             // port for ruby server to use for mocking
             mockProviderService = _pactBuilder.MockService(_servicePort, new JsonSerializerSettings()
             {
-                ContractResolver = new CamelCasePropertyNamesContractResolver()
+                ContractResolver = new CamelCasePropertyNamesContractResolver()     // pr la sérialization - json
             }
             );  
         }

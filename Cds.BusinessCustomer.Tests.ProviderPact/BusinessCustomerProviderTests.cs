@@ -1,10 +1,5 @@
 using Cds.BusinessCustomer.Tests.ProviderPact.PactSetup;
-using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
 using PactNet;
-using PactNet.Infrastructure.Outputters;
-using System;
-using System.Collections.Generic;
 using Xunit;
 using Xunit.Abstractions;
 

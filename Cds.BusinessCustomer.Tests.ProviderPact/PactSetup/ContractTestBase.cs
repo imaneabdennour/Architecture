@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using PactNet;
@@ -29,18 +28,12 @@ namespace Cds.BusinessCustomer.Tests.ProviderPact.PactSetup
 
             _pactVerifierConfig = new PactVerifierConfig
             {
+                // We default to using a ConsoleOutput, but xUnit 2 does not capture the console output, so a custom outputter is required.
                 Outputters =
-                    new
-                        List<IOutput> //NOTE: We default to using a ConsoleOutput, however xUnit 2 does not capture
-                        //the console output, so a custom outputter is required.
+                    new List<IOutput> 
                         {
                             new XUnitOutput(_output)
-                        },
-                // CustomHeaders = new Dictionary<string, string>
-                // {
-                //     {"Authorization", "Basic VGVzdA=="}
-                // }, //This allows the user to set request headers that will be sent with every request the verifier
-                //sends to the provider
+                        },               
                 Verbose = true //Output verbose verification logs to the test output
             };
         }
