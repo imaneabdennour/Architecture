@@ -1,1 +1,1 @@
-Architecture de projey
+Architecture de projet
